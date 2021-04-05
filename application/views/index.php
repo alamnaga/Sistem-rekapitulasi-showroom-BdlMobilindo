@@ -20,7 +20,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<center><h4 class="card-title">Sisten Rekapitulasi Showroom</h4></center>
-							<center><h3 class="card-title">BDL Mobilindo</h3></center>
+							<center><h4 class="card-title">BDL Mobilindo</h4></center>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="user">User</label>
@@ -39,12 +39,6 @@
 								    	Password is required
 							    	</div>
 								</div>
-
-								<div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
-										<label for="remember" class="custom-control-label">Remember Me</label>
-									</div>
 								</div>
 
 								<div class="form-group m-0">
