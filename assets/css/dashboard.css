@@ -1,0 +1,68 @@
+html,body {
+	/* height: 100%; */
+}
+body.dashboard {
+	background-color: #000000;
+	font-size: 20px;
+	color: orange;
+}
+.title{
+    font-size: 50px;
+}
+.header{
+    font-size: 20px;
+    border-bottom: 10px;
+    border-color: white;
+    text-align: right;
+    color: rgb(255, 255, 255);
+}
+.card-group{
+    font-size: 20px;
+    text-align: center;
+} 
+.card-group .card{
+    background-color: rgb(51, 51, 51) ;
+    color: aliceblue;
+}
+.card-wrapper {
+	width: 550px;
+    margin: 50px auto;
+}
+.row{
+    padding: 50px;
+    margin: 10px auto;
+    width: 550px;
+}
+.mobil{
+    background-color: rgb(51, 51, 51) ;
+    color: orange;
+    margin: 50px auto;
+    margin-left: 200px;
+    height: 100px;
+    width: 200px;
+    font-size: 17px;
+}
+.pembelian{
+    background-color: rgb(51, 51, 51) ;
+    color: orange;
+    margin-left: 50px;
+    height: 100px;
+    width: 220px;
+    font-size: 17px;
+}
+.penjualan{
+    background-color: rgb(51, 51, 51) ;
+    color: orange;
+    margin-left: 50px;
+    height: 100px;
+    width: 200px;
+    font-size: 17px;
+}
+.laporan{
+    background-color: rgb(51, 51, 51) ;
+    color: orange;
+    margin-left: 50px;
+    height: 100px;
+    width: 200px;
+    font-size: 17px;
+}
