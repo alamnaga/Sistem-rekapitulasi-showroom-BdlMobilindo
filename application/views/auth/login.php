@@ -39,7 +39,7 @@
 									<label for="password">Password
 										</a>
 									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input id="password" type="password" class="form-control" name="password" value="" required autofocus placeholder="Masukan Password" value="<? set_value('user'); ?>">
 									<div class="invalid-feedback">
 										Password is required
 									</div>
