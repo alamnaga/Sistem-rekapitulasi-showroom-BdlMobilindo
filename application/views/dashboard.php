@@ -8,8 +8,9 @@
     </head>
 
     <body class="dashboard">
-      <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px; border-bottom: 10px;border-color: white;"> Selamat Datang</h4>
-      <br><center><h4 class="title">Sistem Rekapitulasi Showroom</h4></center><br>
+      <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang</h4>
+      <h4></h4>
+      <br><center><h3 class="title">Sistem Rekapitulasi Showroom</h3></center><br>
         <div class="card-wrapper"> 
           <div class="card-group">
               <div class="card">
