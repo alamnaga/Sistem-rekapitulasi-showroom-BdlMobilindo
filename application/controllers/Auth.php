@@ -24,15 +24,20 @@ class Auth extends CI_Controller
 
     private function _login()
     {
-        $user = $this->input->post('user');
+        $username = $this->input->post('user');
         $password = $this->input->post('password');
 
-        $user = $this->db->get_where('admin', ['user' => $user])->row_array();
+        $user = $this->db->get_where('admin', ['user' => $username])->row_array();
 
         //jika usernya ada
-        if ($user['user']) {
-            if (password_verify($password, $user['password'])) {
-                //usser
+        if ($user) {
+            if ($password == $user['password']) {
+                //masuk ke dashboard
+                $data = [
+                    'user' => $user['user']
+                ];
+                $this->session->set_userdata($data);
+                redirect('dashboard');
             } else {
                 // $this->session->set_flashdata('SALAH');
                 redirect('auth');
