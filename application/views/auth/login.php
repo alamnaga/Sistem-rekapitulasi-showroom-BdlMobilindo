@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="author" content="Kodinger">
@@ -19,12 +20,16 @@
 					</div>
 					<div class="card fat">
 						<div class="card-body">
-							<center><h4 class="card-title">Sisten Rekapitulasi Showroom</h4></center>
-							<center><h4 class="card-title">BDL Mobilindo</h4></center>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<center>
+								<h4 class="card-title">Sisten Rekapitulasi Showroom</h4>
+							</center>
+							<center>
+								<h4 class="card-title">BDL Mobilindo</h4>
+							</center>
+							<form method="post" class="my-login-validation" action="<?= base_url('auth') ?>">
 								<div class="form-group">
 									<label for="user">User</label>
-									<input id="user" type="user" class="form-control" name="user" value="" required autofocus>
+									<input id="user" type="user" class="form-control" name="user" value="" required autofocus placeholder="Masukan Username" value="<? set_value('user'); ?>">
 									<div class="invalid-feedback">
 										User is invalid
 									</div>
@@ -35,22 +40,22 @@
 										</a>
 									</label>
 									<input id="password" type="password" class="form-control" name="password" required data-eye>
-								    <div class="invalid-feedback">
-								    	Password is required
-							    	</div>
+									<div class="invalid-feedback">
+										Password is required
+									</div>
 								</div>
-								</div>
-
-								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Login
-									</button>
-								</div>
-							</form>
 						</div>
+
+
+						<button type="submit" class="btn btn-primary btn-block">
+							Login
+						</button>
 					</div>
+					</form>
 				</div>
 			</div>
+		</div>
+		</div>
 		</div>
 	</section>
 
@@ -59,4 +64,5 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="js/my-login.js"></script>
 </body>
+
 </html>
