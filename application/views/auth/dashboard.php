@@ -9,7 +9,7 @@
 </head>
 
 <body class="dashboard">
-  <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang <?= $user['name']; ?></h4>
+  <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang <?= $user['user']; ?></h4>
   <h4></h4>
   <br>
   <center>
