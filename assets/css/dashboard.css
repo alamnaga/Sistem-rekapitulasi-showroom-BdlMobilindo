@@ -16,6 +16,10 @@ body.dashboard {
     text-align: right;
     color: rgb(255, 255, 255);
 }
+.card-wrapper-a{
+	width: 550px;
+    margin: 50px auto;
+}
 .card-group{
     font-size: 20px;
     text-align: center;
@@ -24,45 +28,45 @@ body.dashboard {
     background-color: rgb(51, 51, 51) ;
     color: rgb(255, 255, 255);
 }
-.card-wrapper {
-	width: 550px;
-    margin: 50px auto;
-}
 .row{
     padding: 50px;
     margin: 10px auto;
     width: 550px;
 }
+.card-wrapper-b{
+	width: 900px;
+    padding-top: 20px;
+    margin: 50px auto;
+}
 .mobil{
     background-color: rgb(51, 51, 51) ;
     color: orange;
-    margin: 50px auto;
-    margin-left: 200px;
     height: 100px;
     width: 200px;
     font-size: 17px;
+    margin:auto;
 }
 .pembelian{
     background-color: rgb(51, 51, 51) ;
     color: orange;
-    margin-left: 50px;
     height: 100px;
     width: 220px;
     font-size: 17px;
+    margin:auto;
 }
 .penjualan{
     background-color: rgb(51, 51, 51) ;
     color: orange;
-    margin-left: 50px;
     height: 100px;
     width: 200px;
     font-size: 17px;
+    margin:auto;
 }
 .laporan{
     background-color: rgb(51, 51, 51) ;
     color: orange;
-    margin-left: 50px;
     height: 100px;
     width: 200px;
     font-size: 17px;
+    margin:auto;
 }

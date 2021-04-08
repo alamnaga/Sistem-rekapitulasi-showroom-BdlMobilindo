@@ -14,14 +14,14 @@
             <ul class="list-group">
               <img src="assets/img/logo.jpg">
               <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-      <li><a class="dropdown-item" href="#">Dropdown link</a></li>
-    </ul>
-  </div>
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+                  <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              </ul>
+              </div>
               <li class="list-group-item">A second item</li>
               <li class="list-group-item">A third item</li>
               <li class="list-group-item">A fourth item</li>
@@ -32,12 +32,12 @@
           <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang</h4>
           <br><center><h3 class="title">Sistem Rekapitulasi Showroom</h3></center>
             <div class="card-wrapper pb-3">
-            <h5 style="padding: 10px;border-bottom: 2px solid white;"> Tambah Informasi Mobil</h5>
+              <h5 style="padding: 10px;border-bottom: 2px solid white;"> Tambah Informasi Mobil</h5>
               <div class="row g-2 align-items-center m-1">
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">No. Polisi</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9 pr-2">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -45,7 +45,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Jenis/Merk</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -53,7 +53,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Warna</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -61,7 +61,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Bahan Bakar</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -69,7 +69,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Tahun</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -77,7 +77,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Tgl Beli</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="date" name="" class="form-control">
                 </div>
               </div>
@@ -85,7 +85,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Harga Jual</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
@@ -93,7 +93,7 @@
                 <div class="col-2 ">
                   <label for="text" class="col-form-label">Harga Beli</label>
                 </div>
-                <div class="col-10">
+                <div class="col-9">
                   <input type="text" name="" class="form-control">
                 </div>
               </div>
