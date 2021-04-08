@@ -2,6 +2,7 @@ body.lihat-mobil {
 	background-color: #000000;
 	font-size: 20px;
 	color: orange;
+    
 }
 .row{
     width: 100%;
@@ -16,13 +17,13 @@ body.lihat-mobil {
     text-align: right;
     color: rgb(255, 255, 255);
 }
-.card-wrapper {
+.card-wrapper{
     background-color: rgb(44, 44, 44);
 	width: 750px;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 .btn-danger{
-    margin-left: 598px;
+    margin-left: 545px;
 }
 .list-group-item{
     background-color: #000000;

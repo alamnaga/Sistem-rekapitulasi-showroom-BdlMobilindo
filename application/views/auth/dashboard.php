@@ -11,7 +11,7 @@
       <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang</h4>
       <h4></h4>
       <br><center><h3 class="title">Sistem Rekapitulasi Showroom</h3></center><br>
-        <div class="card-wrapper"> 
+        <div class="card-wrapper-a"> 
           <div class="card-group">
               <div class="card">
                 <div class="card-body">
@@ -34,9 +34,13 @@
             </div>
           </div>
         </div>
-        <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
-        <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
-        <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
-        <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
+        <div class="card-wrapper-b">
+            <div class="card-group">
+              <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
+              <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
+              <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
+              <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
+              </div>
+              </div>
     </body>
 </html>
