@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
   <!-- Required meta tags -->
@@ -15,33 +15,34 @@
 
 </head>
 <!-- sidebar -->
+
 <body class="tambah-mobil">
   <div class="row">
     <div class="col-md-2">
       <ul class="list-group">
         <img src="assets/img/logo.jpg">
         <!-- button dashboard -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Dashboard
-          </button> 
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
+          Dashboard
+        </button>
         <!-- button mobil -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Mobil
-          </button>
-          <!-- button pembelian -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Pembelian
-          </button> 
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Mobil
+        </button>
+        <!-- button pembelian -->
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Pembelian
+        </button>
         <!-- button penjualan -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Penjualan
-          </button>
-          <!-- button laporan -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Laporan
-          </button>
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Penjualan
+        </button>
+        <!-- button laporan -->
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Laporan
+        </button>
     </div>
-<!-- Main -->
+    <!-- Main -->
     <div class="col-md-10">
       <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang</h4>
       <br>
