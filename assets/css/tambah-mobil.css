@@ -1,7 +1,6 @@
 body.tambah-mobil {
 	background-color: #000000;
 	font-size: 20px;
-	color: orange;
     
 }
 .row{
@@ -18,7 +17,6 @@ body.tambah-mobil {
     color: rgb(255, 255, 255);
 }
 .card-wrapper{
-    background-color: rgb(44, 44, 44);
 	width: 750px;
     margin: 15px auto;
 }
