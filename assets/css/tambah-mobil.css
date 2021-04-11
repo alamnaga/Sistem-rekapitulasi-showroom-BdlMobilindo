@@ -1,4 +1,4 @@
-body.lihat-mobil {
+body.tambah-mobil {
 	background-color: #000000;
 	font-size: 20px;
 	color: orange;
@@ -25,7 +25,6 @@ body.lihat-mobil {
 .btn-danger{
     margin-left: 545px;
 }
-.list-group-item{
-    background-color: #000000;
-    color: orange;
+#btnGroupDrop1{
+    text-align: left;
 }

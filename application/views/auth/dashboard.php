@@ -40,7 +40,7 @@
   </div>
   <div class="card-wrapper-b">
     <div class="card-group">
-      <a href="<?= base_url('Auth/Tambahmobil'); ?>">
+      <a href="<?= base_url('Tambahmobil'); ?>">
         <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
       </a>
       <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
