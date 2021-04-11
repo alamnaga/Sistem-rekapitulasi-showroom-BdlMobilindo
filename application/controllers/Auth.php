@@ -14,9 +14,9 @@ class Auth extends CI_Controller
         $this->form_validation->set_rules('user', 'User', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
         if ($this->form_validation->run() == false) {
-            $this->load->view('auth/login');
+            // $this->load->view('auth/login');
             // $this->load->view('auth/dashboard');
-            //$this->load->view('tambah-mobil');
+            $this->load->view('index');
         } else {
             //validasi succes
             //Method private

@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tambah Informasi Mobil</title>
+  <title>Ubah Informasi Mobil</title>
 
   <!-- Bootstrap core CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -67,7 +67,7 @@
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
         
         <div class="card-wrapper pb-3">
-        <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
+        <h5 style="padding: 10px;border-bottom: 2px solid white;"> Ubah Informasi Mobil</h5>
         <div class="row g-2 align-items-center m-1">
           <div class="col-3 ">
             <label for="text" class="col-form-label">No. Polisi</label>
