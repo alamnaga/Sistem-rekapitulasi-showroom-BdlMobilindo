@@ -40,7 +40,9 @@
   </div>
   <div class="card-wrapper-b">
     <div class="card-group">
-      <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
+      <a href="<?= base_url('Auth/Tambahmobil'); ?>">
+        <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
+      </a>
       <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
       <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
       <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
