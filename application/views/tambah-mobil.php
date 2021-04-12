@@ -24,7 +24,7 @@
 
     <!-- Sidebar -->
     <div class="border-right" id="sidebar-wrapper" style="background-color: black;">
-      <div class="sidebar-heading"><img src="assets/img/logo.jpg "width="200"></div>
+      <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
       <div class="list-group list-group-flush">
         <!-- button dashboard -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
@@ -32,21 +32,21 @@
         </button>
         <!-- button mobil -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Mobil
-          </button>
-          <!-- button pembelian -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Pembelian
-          </button> 
+          Mobil
+        </button>
+        <!-- button pembelian -->
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Pembelian
+        </button>
         <!-- button penjualan -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Penjualan
-          </button>
-          <!-- button laporan -->
-          <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-            Laporan
-          </button>
-        </div>
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Penjualan
+        </button>
+        <!-- button laporan -->
+        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+          Laporan
+        </button>
+      </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
@@ -55,93 +55,93 @@
 
       <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color: black;">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-            <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;">Selamat Datang</h4>
+              <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;">Selamat Datang</h4>
             </li>
-        </ul>
+          </ul>
         </div>
       </nav>
 
       <div class="container-fluid">
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-        
+
         <div class="card-wrapper pb-3">
-        <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">No. Polisi</label>
+          <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">No. Polisi</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="no_polis" class="form-control" required>
+            </div>
           </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3">
+              <label for="text" class="col-form-label">Jenis/Merk</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="jenis_typr" class="form-control" required>
+            </div>
           </div>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Warna</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="warna" class="form-control" required>
+            </div>
+          </div>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Bahan Bakar</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="bahan_bakar" class="form-control" required>
+            </div>
+          </div>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Tahun</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="tahun_keluaran" class="form-control" required>
+            </div>
+          </div>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Tgl Beli</label>
+            </div>
+            <div class="col-8">
+              <input type="date" name="tgl_beli" class="form-control" required>
+            </div>
+          </div>
+          <div class="row g-2 align-items-center m-1">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Harga Jual</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="harga_jual" class="form-control" required>
+            </div>
+          </div>
+          <div class="row g-2 align-items-center m-1 pb-2">
+            <div class="col-3 ">
+              <label for="text" class="col-form-label">Harga Beli</label>
+            </div>
+            <div class="col-8">
+              <input type="text" name="harga_beli" class="form-control">
+            </div>
+          </div>
+          <button type="button" class="btn btn-danger">Batal</button>
+          <button type="button" class="btn btn-success">Simpan</button>
         </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3">
-            <label for="text" class="col-form-label">Jenis/Merk</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Warna</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Bahan Bakar</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Tahun</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Tgl Beli</label>
-          </div>
-          <div class="col-8">
-            <input type="date" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Harga Jual</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1 pb-2">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Harga Beli</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <button type="button" class="btn btn-danger">Batal</button>
-        <button type="button" class="btn btn-success">Simpan</button>
       </div>
+
     </div>
 
-      </div>
-        
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+  </div>
+  </div>
+  <!-- /#page-content-wrapper -->
 
   </div>
   <!-- /#wrapper -->

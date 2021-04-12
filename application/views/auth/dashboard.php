@@ -40,12 +40,18 @@
   </div>
   <div class="card-wrapper-b">
     <div class="card-group">
-      <a href="<?= base_url('Tambahmobil'); ?>">
+      <a href="<?= base_url('lihatmobil'); ?>">
         <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
       </a>
-      <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
-      <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
-      <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
+      <a href="<?= base_url('lihatpembelian'); ?>">
+        <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
+      </a>
+      <a href="<?= base_url('lihatpenjualan'); ?>">
+        <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
+      </a>
+      <a href="<?= base_url('lihatmobil'); ?>">
+        <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
+      </a>
     </div>
   </div>
 </body>
