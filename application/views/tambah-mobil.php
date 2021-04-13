@@ -65,76 +65,80 @@
 
       <div class="container-fluid">
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-
-        <div class="card-wrapper pb-3">
-          <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">No. Polisi</label>
+        <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
+          <div class="card-wrapper pb-3">
+            <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">No. Polisi</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="no_polis" class="form-control" required>
+              </div>
             </div>
-            <div class="col-8">
-              <input type="text" name="no_polis" class="form-control" required>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3">
+                <label for="text" class="col-form-label">Jenis/Merk</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="jenis_typr" class="form-control" required>
+              </div>
             </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Warna</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="warna" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Bahan Bakar</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="bahan_bakar" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Tahun</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="tahun_keluaran" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Tgl Beli</label>
+              </div>
+              <div class="col-8">
+                <input type="date" name="tgl_beli" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Harga Jual</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="harga_jual" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1 pb-2">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Harga Beli</label>
+              </div>
+              <div class="col-8">
+                <input type="text" name="harga_beli" class="form-control">
+              </div>
+            </div>
+            <button type="button" class="btn btn-danger" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
+            <!-- <button type="button" class="btn btn-success" onclick="location.href=''">Simpan</button> -->
+            <button type="submit" class="btn btn-success">
+              Login
+            </button>
           </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3">
-              <label for="text" class="col-form-label">Jenis/Merk</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="jenis_typr" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Warna</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="warna" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Bahan Bakar</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="bahan_bakar" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Tahun</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="tahun_keluaran" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Tgl Beli</label>
-            </div>
-            <div class="col-8">
-              <input type="date" name="tgl_beli" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Harga Jual</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="harga_jual" class="form-control" required>
-            </div>
-          </div>
-          <div class="row g-2 align-items-center m-1 pb-2">
-            <div class="col-3 ">
-              <label for="text" class="col-form-label">Harga Beli</label>
-            </div>
-            <div class="col-8">
-              <input type="text" name="harga_beli" class="form-control">
-            </div>
-          </div>
-          <button type="button" class="btn btn-danger">Batal</button>
-          <button type="button" class="btn btn-success">Simpan</button>
-        </div>
+        </form>
       </div>
 
     </div>

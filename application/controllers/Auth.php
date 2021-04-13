@@ -39,6 +39,36 @@ class Auth extends CI_Controller
         $this->load->view('lihat-penjualan', $data);
     }
 
+    public function AksiInsert()
+    {
+        $no_polis = $this->input->post('no_polis');
+        $jenis_typr = $this->input->post('jenis_typr');
+        $warna = $this->input->post('no_polis');
+        $bahan_bakar = $this->input->post('bahan_bakar');
+        $tahun_keluaran = $this->input->post('tahun_keluaran');
+        $tgl_beli = $this->input->post('tgl_beli');
+        $harga_jual = $this->input->post('harga_jual');
+        $harga_beli = $this->input->post('harga_beli');
+
+
+        $DataInsert = array(
+            'no_polis' => $no_polis,
+            'jenis_typr' => $jenis_typr,
+            'warna' => $warna,
+            'bahan_bakar' => $bahan_bakar,
+            'tahun_keluaran' => $tahun_keluaran,
+            'tgl_beli' => $tgl_beli,
+            'harga_jual' => $harga_jual,
+            'harga_beli' => $harga_beli,
+        );
+
+        // echo "<pre>";
+        // print_r($DataInsert);
+        // echo "</pre>";
+        $this->model_mobil->InsertDataMobil($DataInsert);
+        redirect(base_url('lihatmobil'));
+    }
+
     public function index()
     {
         $this->form_validation->set_rules('user', 'User', 'trim|required');
