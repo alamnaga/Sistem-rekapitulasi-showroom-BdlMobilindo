@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 13, 2021 at 07:14 AM
+-- Generation Time: Apr 13, 2021 at 06:40 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -54,16 +54,17 @@ CREATE TABLE `mobil` (
   `warna` varchar(30) CHARACTER SET utf8 NOT NULL,
   `bahan_bakar` varchar(30) CHARACTER SET utf8 NOT NULL,
   `tahun_keluaran` int(5) NOT NULL,
-  `harga` int(30) NOT NULL
+  `harga_jual` int(30) NOT NULL,
+  `harga_beli` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `mobil`
 --
 
-INSERT INTO `mobil` (`id_mobil`, `tgl_beli`, `no_polis`, `jenis_typr`, `warna`, `bahan_bakar`, `tahun_keluaran`, `harga`) VALUES
-(1, '2021-04-11', 'BE 1111 AA', 'Toyota Yaris', 'Hitam', 'Bensin', 2012, 120800000),
-(2, '2021-04-10', 'BE 2222 AA', 'Toyota Fortuner', 'Hitam', 'Bensin', 2008, 122800000);
+INSERT INTO `mobil` (`id_mobil`, `tgl_beli`, `no_polis`, `jenis_typr`, `warna`, `bahan_bakar`, `tahun_keluaran`, `harga_jual`, `harga_beli`) VALUES
+(1, '2021-04-11', 'BE 1111 AA', 'Toyota Yaris', 'Hitam', 'Bensin', 2012, 120800000, 0),
+(2, '2021-04-10', 'BE 2222 AA', 'Toyota Fortuner', 'Hitam', 'Bensin', 2008, 122800000, 0);
 
 -- --------------------------------------------------------
 

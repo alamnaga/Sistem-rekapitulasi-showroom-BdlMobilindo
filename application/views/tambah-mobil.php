@@ -14,7 +14,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+  <link href="assets/css/tambah-mobil.css" rel="stylesheet">
 
 </head>
 
@@ -67,7 +67,7 @@
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
         <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
           <div class="card-wrapper pb-3">
-            <h5 style="padding: 10px;border-bottom: 2px solid white;">Tambah Informasi Mobil</h5>
+            <h5 id="infomobil">Tambah Informasi Mobil</h5>
             <div class="row g-2 align-items-center m-1">
               <div class="col-3 ">
                 <label for="text" class="col-form-label">No. Polisi</label>
