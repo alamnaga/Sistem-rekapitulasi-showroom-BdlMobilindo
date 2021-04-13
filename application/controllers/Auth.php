@@ -47,17 +47,12 @@ class Auth extends CI_Controller
             $this->load->view('auth/login');
             // $this->load->view('auth/dashboard');
             //$this->load->view('tambah-mobil');
-            //$this->load->controller('Lihat_mobil');
+            //$this->load->view('lihat-mobil');
         } else {
             //validasi succes
             //Method private
             $this->_login();
         }
-    }
-
-    public function Tambahmobil()
-    {
-        $this->load->view('tambah-mobil');
     }
 
     private function _login()
