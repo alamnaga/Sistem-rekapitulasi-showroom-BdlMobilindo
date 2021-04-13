@@ -50,6 +50,7 @@
                 <div class="x_panel">
                     <div class="x_title">
                         <h2>Lihat Mobil</h2>
+                        <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">Tambah Mobil</button>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
