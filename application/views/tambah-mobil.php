@@ -9,8 +9,9 @@
   <!-- Bootstrap core CSS -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="assets/css/simple-sidebar.css" rel="stylesheet">
-  </head>
+  <link href="assets/css/tambah-mobil.css" rel="stylesheet">
+</head>
+
 <body>
   <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
@@ -40,6 +41,7 @@
         </div>
     </div>
     <!-- /#sidebar-wrapper -->
+
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <nav class="navbar navbar-expand-lg navbar-light border-bottom" style="background-color: black;">
