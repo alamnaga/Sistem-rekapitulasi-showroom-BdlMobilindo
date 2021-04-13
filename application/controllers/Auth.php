@@ -55,11 +55,6 @@ class Auth extends CI_Controller
         }
     }
 
-    public function Tambahmobil()
-    {
-        $this->load->view('tambah-mobil');
-    }
-
     private function _login()
     {
         $username = $this->input->post('user');
