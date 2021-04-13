@@ -1,17 +1,64 @@
-/*!
- * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template/simple-sidebar)
- * Copyright 2013-2020 Start Bootstrap
- * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
- */
+
+
+.row {
+	width: 100%;
+}
+
+.col-md-2 {
+	border-right: 1.5px solid wheat;
+}
+
+.header {
+	font-size: 20px;
+	border-width: 10px;
+	border-bottom: 1.5px solid white;
+	text-align: right;
+	color: rgb(255, 255, 255);
+}
+
+.card-wrapper {
+	background-color: rgb(44, 44, 44);
+	width: 750px;
+	margin: 15px auto;
+}
+
+.x_panel,
+.x_title {
+	margin-bottom: 10px
+}
+
+.x_title h2 {
+	margin: 5px 0 6px;
+	float: left;
+	display: block;
+	width: 62%;
+	font-size: 17px
+}
+
+.x_panel {
+	position: relative;
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 10px 17px;
+	display: inline-block;
+	background: rgba(28, 28, 28, 1);
+	border: 1px solid #E6E9ED;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	opacity: 1;
+	transition: all .2s ease;
+	position: relative;
+}
+
+table.table {
+	background-color: white;
+}
+
  .header{
 	font-size: 20px;
 	text-align: right;
 	color: rgb(255, 255, 255);
-  }
-.card-wrapper{
-	  margin: 15px auto;
-	  background-color: #424242;
-	  color: orange;
   }
   
   #btnGroupDrop1{
@@ -20,9 +67,6 @@
 	background-color: #424242;
   }
   
-  .table{
-	  background-color: white;
-  }
    #wrapper {
 	  overflow-x: hidden;
 	  background-color: black;
