@@ -62,12 +62,12 @@
 
             <div class="container-fluid">
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-                <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
+                <form action="<?php echo base_url('Auth/AksiBeli') ?>" method="post">
                     <div class="card-wrapper pb-3">
                         <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Pembelian</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">+ Tambah Pembelian</button>
+                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahbeli'); ?>'">+ Tambah Pembelian</button>
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -91,7 +91,7 @@
                                     <?php foreach ($data_pembelian  as $mobil) { ?>
                                         <tr>
                                             <td><?php echo $mobil->no_polis ?></td>
-                                            <td><?php echo $mobil->jenis_type ?></td>
+                                            <td><?php echo $mobil->jenis_typr ?></td>
                                             <td><?php echo $mobil->warna ?></td>
                                             <td><?php echo $mobil->bahan_bakar ?></td>
                                             <td><?php echo $mobil->tahun_keluaran ?></td>

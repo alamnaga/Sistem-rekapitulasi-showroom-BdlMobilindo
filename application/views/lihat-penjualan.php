@@ -67,7 +67,7 @@
                         <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">+ Tambah Penjualan</button>
+                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button>
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -91,10 +91,10 @@
                                     <?php foreach ($data_penjualan  as $mobil) { ?>
                                         <tr>
                                             <td><?php echo $mobil->no_polis ?></td>
-                                            <td><?php echo $mobil->jenis_type ?></td>
+                                            <td><?php echo $mobil->jenis_typr ?></td>
                                             <td><?php echo $mobil->warna ?></td>
                                             <td><?php echo $mobil->bahan_bakar ?></td>
-                                            <td><?php echo $mobil->tahun_keluar ?></td>
+                                            <td><?php echo $mobil->tahun_keluaran ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
                                             <td style=" text-align: center;">
                                                 <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
