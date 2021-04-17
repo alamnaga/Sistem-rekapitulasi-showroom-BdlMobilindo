@@ -14,7 +14,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="assets/css/ubah-mobil.css" rel="stylesheet">
+  <link href="assets/css/tambah-mobil.css" rel="stylesheet">
 
 </head>
 
@@ -66,81 +66,81 @@
       <div class="container-fluid">
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
         
-        <div class="card-wrapper pb-3">
-        <h5 style="padding: 10px;border-bottom: 2px solid white;"> Ubah Informasi Mobil</h5>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">No. Polisi</label>
+          <div class="card-wrapper pb-5">
+            <h5 style="padding: 10px;border-bottom: 2px solid white;"> Ubah Informasi Mobil</h5>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                <label for="text" class="col-form-label">No. Polisi</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3">
+                  <label for="text" class="col-form-label">Jenis/Merk</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Warna</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Bahan Bakar</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Tahun</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Tgl Beli</label>
+                </div>
+                <div class="col-8">
+                  <input type="date" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Harga Jual</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <div class="row g-2 align-items-center m-1 pb-2">
+                <div class="col-3 ">
+                  <label for="text" class="col-form-label">Harga Beli</label>
+                </div>
+                <div class="col-8">
+                  <input type="text" name="" class="form-control">
+                </div>
+              </div>
+              <button type="button" class="btn btn-success float-right mr-2">Simpan</button>
+              <button type="button" class="btn btn-danger float-right mr-2">Batal</button>
           </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3">
-            <label for="text" class="col-form-label">Jenis/Merk</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Warna</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Bahan Bakar</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Tahun</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Tgl Beli</label>
-          </div>
-          <div class="col-8">
-            <input type="date" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Harga Jual</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <div class="row g-2 align-items-center m-1 pb-2">
-          <div class="col-3 ">
-            <label for="text" class="col-form-label">Harga Beli</label>
-          </div>
-          <div class="col-8">
-            <input type="text" name="" class="form-control">
-          </div>
-        </div>
-        <button type="button" class="btn btn-danger">Batal</button>
-        <button type="button" class="btn btn-success">Simpan</button>
       </div>
-    </div>
 
-      </div>
-        
-      </div>
     </div>
+        
+    </div>
+  </div>
     <!-- /#page-content-wrapper -->
 
   </div>

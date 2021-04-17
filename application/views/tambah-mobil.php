@@ -23,7 +23,7 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="border-right" id="sidebar-wrapper" style="background-color: black;">
+    <div class="border-right" id="sidebar-wrapper" ">
       <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
       <div class="list-group list-group-flush">
         <!-- button dashboard -->
@@ -66,7 +66,7 @@
       <div class="container-fluid">
         <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
         <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
-          <div class="card-wrapper pb-3">
+          <div class="card-wrapper pb-5">
             <h5 id="infomobil">Tambah Informasi Mobil</h5>
             <div class="row g-2 align-items-center m-1">
               <div class="col-3 ">
@@ -132,10 +132,10 @@
                 <input type="text" name="harga_beli" class="form-control">
               </div>
             </div>
-            <button type="button" class="btn btn-danger" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
+            <button type="button" class="btn btn-danger float-right mr-2" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
             <!-- <button type="button" class="btn btn-success" onclick="location.href=''">Simpan</button> -->
-            <button type="submit" class="btn btn-success">
-              Login
+            <button type="submit" class="btn btn-success float-right mr-2">
+              Simpan
             </button>
           </div>
         </form>

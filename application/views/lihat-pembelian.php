@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="assets/css/lihat-pembelian.css" rel="stylesheet">
+    <link href="assets/css/lihat-mobil.css" rel="stylesheet">
 
 </head>
 
@@ -76,7 +76,7 @@
                                     </div>
 
                                     <table class="table">
-                                        <thead class="table-light">
+                                        <thead class="table-secondary">
                                                 <tr>
                                                     <th>Nama Polisi</th>
                                                     <th>Jenis / Tipe</th>

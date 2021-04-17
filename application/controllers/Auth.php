@@ -76,7 +76,9 @@ class Auth extends CI_Controller
         if ($this->form_validation->run() == false) {
             // $this->load->view('auth/login');
             // $this->load->view('auth/dashboard');
-            $this->load->view('lihat-laporan');
+            // $this->load->view('tambah-penjualan');
+            $this->load->view('tambah-penjualan');
+
         } else {
             //validasi succes
             //Method private

@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $title ?></title>
+    <title>Lihat Laporan</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,8 +66,30 @@
                             <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat laporan</h5>
                             
                                 
-                        </div>  
+                        </div> 
+
+                        <div class="card-wrapper pb-3">
+                            <div class="x_panel">
+                                <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">laporan Pembelian dan Penjualan</h5>
+                                <table class="table table-bordered border-dark">
+                                    <thead class="table-secondary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Bulan</th>
+                                            <th>Penjualan</th>
+                                            <th>Pembelian</th>
+                                            <th>Laba</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody>
+                                                <!-- manggil dari db -->
+                                                
+                                        </tbody>
+                                </table>
+                            </div>    
+                        </div>
                 </div>
+            </div>
             <!-- Bootstrap core JavaScript -->
             <script src="assets/vendor/jquery/jquery.min.js"></script>
             <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

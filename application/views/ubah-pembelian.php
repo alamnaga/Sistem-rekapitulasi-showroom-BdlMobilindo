@@ -20,9 +20,9 @@
         <div class="d-flex" id="wrapper">
 
             <!-- Sidebar -->
-            <div class="border-right" id="sidebar-wrapper" style="background-color: black;">
+            <div class="border-right" id="sidebar-wrapper"">
                 <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
-                <div class="list-group list-group-flush">
+                <div class="list-group ">
                     <!-- button dashboard -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
                      Dashboard
@@ -64,19 +64,21 @@
                     <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                         <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
                             <div class="card-wrapper pb-3">
-                            <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Informasi Mobil</h5>
+                                <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Ubah pembelian</h5>
                             
                                 <div class="x_panel">
                                     <div class="x_title">
-                                        <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">+ Tambah Mobil</button>
-                                            <!-- <ul class="nav navbar-right panel_toolbox">
-                                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
-                                                <li><a class="close-link"><i class="fa fa-close"></i></a></li>
-                                            </ul> -->
-                                        <div class="clearfix"></div>
+                                        <div class="row ">
+                                            <div class="col text-right">
+                                                <label for="text" class="col-form-label" style="color: orange;">Tgl Penjualan</label>
+                                            </div>
+                                            <div class="col-3">
+                                                <input type="date" name="tgl_beli" class="form-control" required>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                        <table class="table table-bordered">
+                                        <table class="table table-bordered text-center">
                                             <thead class="table-secondary">
                                                     <tr>
                                                         <th>No Polisi</th>
@@ -84,28 +86,47 @@
                                                         <th>Warna</th>
                                                         <th>Bahan Bakar</th>
                                                         <th>Tahun Keluaran</th>
-                                                        <th>Harga Jual</th>
                                                         <th>Aksi</th>
                                                     </tr>
                                             </thead>
-                                            <tbody>
-                                                <!-- manggil dari db -->
-                                                <?php foreach ($data_mobil  as $mobil) { ?>
-                                                    <tr>
-                                                        <td><?php echo $mobil->no_polis ?></td>
-                                                        <td><?php echo $mobil->jenis_typr ?></td>
-                                                        <td><?php echo $mobil->warna ?></td>
-                                                        <td><?php echo $mobil->bahan_bakar ?></td>
-                                                        <td><?php echo $mobil->tahun_keluaran ?></td>
-                                                        <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                                        <td style=" text-align: center;">
-                                                            <?php echo anchor('example/edit_form_med/' . $mobil->id_mobil, '<button class="btn btn-info btn-xs" type="button"><span  class="fa fa-pencil fa-3x"></span></button>'); ?>
-                                                            <?php echo anchor('example/remove_med/' . $mobil->id_mobil, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
-                                                        </td>
-                                                    </tr>
-                                                <?php } ?>
-                                            </tbody>
+                                            <tbody class="table-secondary">
+                                                <tr>
+                                                    <td>
+                                                        <div class="col"><input type="text" name="no_polis" class="form-control" required></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="col"><input type="text" name="no_polis" class="form-control" required></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="col"><input type="text" name="no_polis" class="form-control" required></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="col"><input type="text" name="no_polis" class="form-control" required></div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="col"><input type="text" name="no_polis" class="form-control" required></div>
+                                                    </td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-danger mr-2">Hapus</button>
+                                                    </td>
+                                                </tr>
+                                                    <td colspan="6">
+                                                        <div class="row ">
+                                                            <div class="col text-right">
+                                                                <label for="text" class="col-form-label" style="color: orange;">Harga</label>
+                                                            </div>
+                                                            <div class="col-3 mr-5">
+                                                                <input type="text" name="tgl_beli" class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                   
+                                            </tbody>  
                                         </table>
+                                        <button type="button" class="btn btn-success float-right mr-2">Simpan</button>
+                                        <button type="button" class="btn btn-danger float-right mr-2">Batal</button>
+                                </div>
+                            </div>
                 </div>  
             </div>
             <!-- Bootstrap core JavaScript -->
