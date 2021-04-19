@@ -28,4 +28,10 @@ class Model_mobil extends CI_Model
         $this->db->where($where);
         $this->db->delete($table);
     }
+    // public function jumlah()
+    // {
+    //     $this->db->select('*');
+    //     $this->db->from('mobil');
+    //     return $this->db->get()->num_rows();
+    // }
 }

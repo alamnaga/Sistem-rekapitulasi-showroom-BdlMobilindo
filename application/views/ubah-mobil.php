@@ -139,7 +139,7 @@
                   <label for="text" class="col-form-label">Harga Beli</label>
                 </div>
                 <div class="col-8">
-                  <input type="text" id="harga_beli" name="harga_jual" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_beli ?>">
+                  <input type="text" id="harga_beli" name="harga_beli" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_beli ?>">
                 </div>
               </div>
 
