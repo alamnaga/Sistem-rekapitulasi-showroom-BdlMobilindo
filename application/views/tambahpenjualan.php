@@ -28,23 +28,23 @@
             <div class="list-group list-group-flush">
                 <!-- button dashboard -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-                    Dashboard
+                <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Mobil
+                <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Pembelian
+                <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Penjualan
+                <img src="assets/img/sales.png" style="width: 25px; ">  Penjualan
                 </button>
                 <!-- button laporan -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Laporan
+                <img src="assets/img/laporan.png" style="width: 25px; ">  Laporan
                 </button>
             </div>
         </div>
@@ -66,7 +66,7 @@
             <div class="container-fluid">
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <form action="<?php echo base_url('Auth/AksiJual') ?>" method="post">
-                    <div class="card-wrapper pb-3">
+                <div class="card-wrapper pb-5">
                         <h5 id="infomobil">Tambah penjualan</h5>
                         <div class="row g-2 align-items-center m-1">
                             <div class="col-3 ">
@@ -124,11 +124,10 @@
                                 <input type="text" name="harga_jual" class="form-control" required>
                             </div>
                         </div>
-
-                        <button type="button" class="btn btn-danger" onclick="location.href='<?= base_url('lihatpenjualan'); ?>'">Batal</button>
+                        <button type="button" class="btn btn-danger float-right mr-2" onclick="location.href='<?= base_url('lihatpenjualan'); ?>'">Batal</button>
                         <!-- <button type="button" class="btn btn-success" onclick="location.href=''">Simpan</button> -->
-                        <button type="submit" class="btn btn-success">
-                            Login
+                        <button type="submit" class="btn btn-success float-right mr-2">
+                        Simpan
                         </button>
                     </div>
                 </form>
