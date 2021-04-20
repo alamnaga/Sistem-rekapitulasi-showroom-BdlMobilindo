@@ -25,23 +25,23 @@
             <div class="list-group list-group-flush">
                 <!-- button dashboard -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-                <img src="assets/img/home.png" style="width: 25px; "> Dashboard
+                    <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatmobil'); ?>'">
+                    <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
+                    <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                <img src="assets/img/sales.png" style="width: 25px; ">  Penjualan
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatpenjualan'); ?>'">
+                    <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                <img src="assets/img/laporan.png" style="width: 25px; ">  Laporan
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatlaporan'); ?>'">
+                    <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
                 </button>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;">Selamat Datang</h4>
+                            <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang </h4>
                         </li>
                     </ul>
                 </div>

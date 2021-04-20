@@ -28,7 +28,7 @@
                     <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatmobil'); ?>'">
                     <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
@@ -54,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;"> Selamat Datang </h4>
+                            <h4 class="header"><img src=assets/img/header.png alt="header" style="width: 20px; height: 20px;">Selamat Datang</h4>
                         </li>
                     </ul>
                 </div>
@@ -64,11 +64,10 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
                     <div class="card-wrapper pb-3">
-                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Informasi Mobil</h5>
-
+                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Laporan Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">+ Tambah Mobil</button>
+                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('auth/excelpenjualan'); ?>'">+ Export Excell</button>
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -76,34 +75,36 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <table class="table table-bordered">
+                            <table class="table">
                                 <thead class="table-light">
                                     <tr>
-                                        <th>No Polisi</th>
+                                        <th>No</th>
+                                        <th>Nama Polisi</th>
                                         <th>Jenis / Tipe</th>
                                         <th>Warna</th>
                                         <th>Bahan Bakar</th>
                                         <th>Tahun Keluaran</th>
                                         <th>Harga Jual</th>
-                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- manggil dari db -->
-                                    <?php foreach ($data_mobil  as $mobil) { ?>
+                                    <?php $i = 1;
+                                    foreach ($data_laporan as $mobil) { ?>
                                         <tr>
+                                            <td><?= $i; ?></td>
                                             <td><?php echo $mobil->no_polis ?></td>
                                             <td><?php echo $mobil->jenis_typr ?></td>
                                             <td><?php echo $mobil->warna ?></td>
                                             <td><?php echo $mobil->bahan_bakar ?></td>
                                             <td><?php echo $mobil->tahun_keluaran ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                            <td style=" text-align: center;">
-                                                <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-info btn-xs" type="button"><span  class="fa fa-pencil fa-3x"></span></button>'); ?>
-                                                <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
-                                            </td>
                                         </tr>
-                                    <?php } ?>
+                                    <?php $i++;
+                                    } ?>
+                                    <tr style="font-weight: bold;">
+                                        <td colspan="6">Total</td>
+                                        <td>Rp <?php echo number_format($sum_jumlahpenjualan->jumlahpenjualan) ?></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
