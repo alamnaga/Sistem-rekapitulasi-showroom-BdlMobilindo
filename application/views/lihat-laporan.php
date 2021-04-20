@@ -25,23 +25,23 @@
                 <div class="list-group list-group-flush">
                     <!-- button dashboard -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-                        Dashboard
+                    <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                     </button>
                     <!-- button mobil -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                        Mobil
+                    <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                     </button>
                     <!-- button pembelian -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                        Pembelian
+                    <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                     </button>
                     <!-- button penjualan -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                        Penjualan
+                    <img src="assets/img/sales.png" style="width: 25px; ">  Penjualan
                     </button>
                     <!-- button laporan -->
                     <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                        Laporan
+                    <img src="assets/img/laporan.png" style="width: 25px; ">  Laporan
                     </button>
                 </div>
             </div>

@@ -69,6 +69,22 @@ class Auth extends CI_Controller
         redirect(base_url('lihatmobil'));
     }
 
+    public function AksiBeli()
+    {
+        $this->load->model('Model_beli', 'model');
+        $this->model->tambah();
+        redirect(base_url('lihatpembelian'));
+    }
+
+    public function AksiJual()
+    {
+        // $this->load->model('Model_jual', 'modeljual');
+        // $this->modeljual->tambah();
+        $this->load->model('Model_jual', 'modeljual');
+        $this->modeljual->tambah();
+
+        redirect(base_url('lihatpenjualan'));
+    }
 
     public function edit_ubahmobil($id_mobil)
     {
@@ -136,7 +152,8 @@ class Auth extends CI_Controller
             $this->load->view('auth/login');
             // $this->load->view('auth/dashboard');
             //$this->load->view('tambah-mobil');
-            //$this->load->view('lihat-mobil');
+            //$this->load->view('lihat-laporan');
+            //$this->load->view('ubah-mobil');
         } else {
             //validasi succes
             //Method private

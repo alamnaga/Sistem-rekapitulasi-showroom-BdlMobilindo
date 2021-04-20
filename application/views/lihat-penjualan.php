@@ -12,7 +12,7 @@
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="assets/css/lihat-penjualan.css" rel="stylesheet">
+    <link href="assets/css/lihat-mobil.css" rel="stylesheet">
 
 </head>
 
@@ -23,25 +23,25 @@
         <div class="border-right" id="sidebar-wrapper" style="background-color: black;">
             <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
             <div class="list-group list-group-flush">
-                <!-- button dashboard -->
+               <!-- button dashboard -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-                    Dashboard
+                <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Mobil
+                <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Pembelian
+                <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Penjualan
+                <img src="assets/img/sales.png" style="width: 25px; ">  Penjualan
                 </button>
                 <!-- button laporan -->
                 <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-                    Laporan
+                <img src="assets/img/laporan.png" style="width: 25px; ">  Laporan
                 </button>
             </div>
         </div>
@@ -67,7 +67,7 @@
                         <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahmobil'); ?>'">+ Tambah Penjualan</button>
+                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button>
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -91,10 +91,10 @@
                                     <?php foreach ($data_penjualan  as $mobil) { ?>
                                         <tr>
                                             <td><?php echo $mobil->no_polis ?></td>
-                                            <td><?php echo $mobil->jenis_type ?></td>
+                                            <td><?php echo $mobil->jenis_typr ?></td>
                                             <td><?php echo $mobil->warna ?></td>
                                             <td><?php echo $mobil->bahan_bakar ?></td>
-                                            <td><?php echo $mobil->tahun_keluar ?></td>
+                                            <td><?php echo $mobil->tahun_keluaran ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
                                             <td style=" text-align: center;">
                                                 <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>

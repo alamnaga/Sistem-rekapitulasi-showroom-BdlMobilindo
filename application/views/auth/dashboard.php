@@ -16,7 +16,7 @@
     <h3 class="title">Sistem Rekapitulasi Showroom</h3>
   </center><br>
   <div class="card-wrapper-a">
-    <div class="card-group">
+    <div class="card-group"  id="titletotal">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Mobil</h5>
@@ -39,19 +39,20 @@
   </div>
   </div>
   <div class="card-wrapper-b">
-    <div class="card-group">
-      <a href="<?= base_url('lihatmobil'); ?>">
-        <button type="button" class="mobil">Mobil<br>Menambahan Mobil</button>
-      </a>
-      <a href="<?= base_url('lihatpembelian'); ?>">
-        <button type="button" class="pembelian">Pembelian<br>Menambahan Pembelian</button>
-      </a>
-      <a href="<?= base_url('lihatpenjualan'); ?>">
-        <button type="button" class="penjualan">Penjualan<br>Menambahan Penjualan</button>
-      </a>
-      <a href="<?= base_url('lihatmobil'); ?>">
-        <button type="button" class="laporan">Laporan<br>Menambahan Laporan</button>
-      </a>
+    <div class="card-group" id="groupbutton">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button id="button" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatmobil'); ?>'">
+        <img src="assets/img/mobil.png" style="width: 25px; "><h5>Mobil</h5>Informasi Mobil</button>
+
+        <button id="button" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatpembelian'); ?>'">
+        <img src="assets/img/cart.png" style="width: 25px; "><h5>Pembelian</h5>Informasi Pembelian</button>
+
+        <button id="button" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatpenjualan'); ?>'">
+        <img src="assets/img/sales.png" style="width: 25px; "><h5>Penjualan</h5>Informasi Penjualan</button>
+
+        <button id="button" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatmobil'); ?>'">
+        <img src="assets/img/laporan.png" style="width: 25px; "><h5>Laporan</h5>Informasi Laporan</button>
+      </div>
     </div>
   </div>
 </body>
