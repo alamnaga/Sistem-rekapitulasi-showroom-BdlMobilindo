@@ -97,7 +97,7 @@
                                             <td><?php echo $mobil->tahun_keluaran ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_beli) ?></td>
                                             <td style=" text-align: center;">
-                                                <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
+                                                <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?>
                                             </td>
                                         </tr>
                                     <?php } ?>

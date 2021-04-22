@@ -14,7 +14,7 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="assets/css/ubah-mobil.css" rel="stylesheet">
+  <link rel="stylesheet "href="<?php echo base_url(); ?>cassets/css/tambah-mobil.css">
 
 </head>
 
