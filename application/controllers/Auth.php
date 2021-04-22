@@ -21,6 +21,7 @@ class Auth extends CI_Controller
         $this->load->view('lihat-mobil', $data);
     }
 
+
     public function lihatpembelian()
     {
         $data = array(
@@ -30,13 +31,36 @@ class Auth extends CI_Controller
         $this->load->view('lihat-pembelian', $data);
     }
 
+    public function lihatlaporanpembelian()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            'data_laporan' => $this->model_pembelian->tabel_laporan()
+
+        );
+        $data['sum_jumlah'] = $this->model_pembelian->get_sum();
+        $this->load->view('lihat-laporan-pembelian', $data);
+    }
+
     public function lihatpenjualan()
     {
         $data = array(
             'title' => 'Data Mobil',
             'data_penjualan' => $this->model_penjualan->tabel_penjualan()
         );
+
         $this->load->view('lihat-penjualan', $data);
+    }
+
+    public function lihatlaporanpenjualan()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            'data_laporan' => $this->model_penjualan->tabel_laporan()
+        );
+        $data['sum_jumlahpenjualan'] = $this->model_penjualan->get_sum();
+
+        $this->load->view('lihat-laporan-penjualan', $data);
     }
 
     public function AksiInsert()
@@ -143,6 +167,25 @@ class Auth extends CI_Controller
         redirect('lihatpenjualan');
     }
 
+    public function excelpenjualan()
+    {
+        $data = array(
+            'title' => 'Rekap Laporan Penjualan',
+            'data_penjualan' => $this->model_penjualan->tabel_penjualan()
+        );
+        $data['sum_jumlahpenjualan'] = $this->model_penjualan->get_sum();
+        $this->load->view('excel/excelpenjualan', $data);
+    }
+
+    public function excelpembelian()
+    {
+        $data = array(
+            'title' => 'Rekap Laporan Pembelian',
+            'data_pembelian' => $this->model_pembelian->tabel_pembelian()
+        );
+        $data['sum_jumlah'] = $this->model_pembelian->get_sum();
+        $this->load->view('excel/excelpembelian', $data);
+    }
 
     public function index()
     {
@@ -153,7 +196,7 @@ class Auth extends CI_Controller
             // $this->load->view('auth/dashboard');
             //$this->load->view('tambah-mobil');
             //$this->load->view('lihat-laporan');
-            //$this->load->view('ubah-mobil');
+            //$this->load->view('lihat-laporan-pembelian');
         } else {
             //validasi succes
             //Method private

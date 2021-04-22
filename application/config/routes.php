@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['lihatmobil'] = 'auth/lihatmobil';
 $route['lihatpembelian'] = 'auth/lihatpembelian';
 $route['lihatpenjualan'] = 'auth/lihatpenjualan';
+$route['laporanpembelian'] = 'auth/lihatlaporanpembelian';
+$route['laporanpenjualan'] = 'auth/lihatlaporanpenjualan';

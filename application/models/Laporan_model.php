@@ -10,4 +10,12 @@ class Laporan_model extends CI_Model
 
         return $query->result();
     }
+    public function getDataBarangPem()
+    {
+        return $this->db->get('pembelian')->result_array();
+    }
+    public function getDataBarangPen()
+    {
+        return $this->db->query('penjualan')->result_array();
+    }
 }
