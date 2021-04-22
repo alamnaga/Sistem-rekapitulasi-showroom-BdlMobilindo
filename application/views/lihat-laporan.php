@@ -64,7 +64,6 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <div class="card-wrapper pb-3">
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat laporan</h5>
-
                     <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('laporanpenjualan'); ?>'">+ Laporan Penjualan</button>
                     <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('laporanpembelian'); ?>'">+ Laporan Pembelian</button>
                 </div>
