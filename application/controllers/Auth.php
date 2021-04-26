@@ -310,7 +310,7 @@ class Auth extends CI_Controller
             // $this->load->view('auth/dashboard');
             //$this->load->view('tambah-mobil');
             //$this->load->view('lihat-laporan');
-            //$this->load->view('lihat-laporan-pembelian');
+            //$this->load->view('ubahmobil');
         } else {
             //validasi succes
             //Method private

@@ -67,12 +67,12 @@
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Laporan Pembelian</h5>
                     <div class="x_panel">
                         <div class="x_title">
-                            <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('auth/excelsearchpenjualan'); ?>'">+ Export Excell</button>
-                            <!-- <ul class="nav navbar-right panel_toolbox">
+                            <!-- <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('auth/excelsearchpenjualan'); ?>'">+ Export Excell</button>
+                            <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
-                                            </ul> -->
-                            <div class="clearfix"></div>
+                                            </ul>
+                            <div class="clearfix"></div> -->
                         </div>
                         <div class="navbar-form navbar-right">
                             <?php echo form_open('searchpenjualan') ?>

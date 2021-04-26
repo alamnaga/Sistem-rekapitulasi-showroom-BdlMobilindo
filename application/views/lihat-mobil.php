@@ -64,7 +64,7 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
 
                 <div class="card-wrapper pb-3">
-                    <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Informasi Mobil</h5>
+                    <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Data Mobil</h5>
 
 
                     <!-- search-->
