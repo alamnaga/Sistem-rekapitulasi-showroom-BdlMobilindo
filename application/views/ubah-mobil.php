@@ -28,23 +28,23 @@
       <div class="list-group list-group-flush">
         <!-- button dashboard -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-        <img src="assets/img/home.png" style="width: 25px; "> Dashboard
+          <img src="assets/img/home.png" style="width: 25px; "> Dashboard
         </button>
         <!-- button mobil -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-        <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
+          <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
         </button>
         <!-- button pembelian -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-        <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
+          <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
         </button>
         <!-- button penjualan -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-        <img src="assets/img/sales.png" style="width: 25px; ">  Penjualan
+          <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
         </button>
         <!-- button laporan -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-        <img src="assets/img/laporan.png" style="width: 25px; ">  Laporan
+          <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
         </button>
       </div>
     </div>
@@ -69,7 +69,7 @@
         <div class="card-wrapper pb-3">
           <h5 style="padding: 10px;border-bottom: 2px solid white;"> Ubah Informasi Mobil</h5>
           <?php foreach ($data_mobil  as $mobil) { ?>
-            <form action="<?php echo base_url() . 'Auth/update'; ?>" method="post">
+            <form action="<?php echo base_url() . 'auth/update'; ?>" method="post">
               <div class="row g-2 align-items-center m-1">
                 <div class="col-3 ">
                   <label for="text" class="col-form-label">No. Polisi</label>
@@ -118,10 +118,10 @@
 
               <div class="row g-2 align-items-center m-1">
                 <div class="col-3 ">
-                  <label for="text" class="col-form-label">Tgl Beli</label>
+                  <label for="text" class="col-form-label">Tgl jual</label>
                 </div>
                 <div class="col-8">
-                  <input type="date" id="tgl_beli" name="tgl_beli" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->tgl_beli ?>">
+                  <input type="date" id="tgl_jual" name="tgl_jual" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->tgl_jual ?>">
                 </div>
               </div>
 
@@ -134,14 +134,14 @@
                 </div>
               </div>
 
-              <div class="row g-2 align-items-center m-1">
+              <!-- <div class="row g-2 align-items-center m-1">
                 <div class="col-3 ">
                   <label for="text" class="col-form-label">Harga Beli</label>
                 </div>
                 <div class="col-8">
                   <input type="text" id="harga_beli" name="harga_beli" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_beli ?>">
                 </div>
-              </div>
+              </div> -->
 
 
               <div class="row g-2 align-items-center m-1">

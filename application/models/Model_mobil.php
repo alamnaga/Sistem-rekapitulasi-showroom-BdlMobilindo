@@ -8,10 +8,65 @@ class Model_mobil extends CI_Model
         return $query->result();
     }
 
-    public function InsertDataMobil($data)
+    public function InsertDataPenjualan($data)
     {
-        $this->db->insert('mobil', $data);
+        $this->db->insert('penjualan', $data);
     }
+    // insert
+    public function insert()
+    {
+        $this->db->trans_start();
+
+        // jalankan query
+
+        $data = [
+            'no_polis' => $this->input->post('no_polis', true),
+            'harga_beli' => $this->input->post('harga_beli', true),
+            'harga_jual' => $this->input->post('harga_jual', true),
+            'jenis_typr' => $this->input->post('jenis_typr', true),
+            'warna' => $this->input->post('warna', true),
+            'bahan_bakar' => $this->input->post('bahan_bakar', true),
+            'tahun_keluaran' => $this->input->post('tahun_keluaran', true),
+            'tgl_beli' => $this->input->post('tgl_beli', true),
+            'tgl_jual' => $this->input->post('tgl_jual', true)
+        ];
+
+        $this->db->insert('mobil', $data);
+
+
+        $penjualanmobil = [
+
+            'no_polis' => $this->input->post('no_polis', true),
+            'harga_jual' => $this->input->post('harga_jual', true),
+            'jenis_typr' => $this->input->post('jenis_typr', true),
+            'warna' => $this->input->post('warna', true),
+            'bahan_bakar' => $this->input->post('bahan_bakar', true),
+            'tahun_keluaran' => $this->input->post('tahun_keluaran', true),
+            'tgl_jual' => $this->input->post('tgl_jual', true)
+        ];
+
+        $this->db->insert('penjualan', $penjualanmobil);
+
+        $pembelianmobil = [
+
+            'no_polis' => $this->input->post('no_polis', true),
+            'harga_beli' => $this->input->post('harga_beli', true),
+            'jenis_typr' => $this->input->post('jenis_typr', true),
+            'warna' => $this->input->post('warna', true),
+            'bahan_bakar' => $this->input->post('bahan_bakar', true),
+            'tahun_keluaran' => $this->input->post('tahun_keluaran', true),
+            'tgl_beli' => $this->input->post('tgl_beli', true)
+        ];
+
+        $this->db->insert('pembelian', $pembelianmobil);
+
+
+
+
+        $this->db->trans_complete();
+    }
+    // insert
+
     public function edit_data($where, $table)
     {
 
@@ -27,6 +82,17 @@ class Model_mobil extends CI_Model
     {
         $this->db->where($where);
         $this->db->delete($table);
+    }
+
+    public function get_keyword($keyword)
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        $this->db->like('no_polis', $keyword);
+        $this->db->or_like('jenis_typr', $keyword);
+        $this->db->or_like('warna', $keyword);
+
+        return $this->db->get()->result();
     }
     // public function jumlah()
     // {

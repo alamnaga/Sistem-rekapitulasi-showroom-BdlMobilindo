@@ -62,64 +62,72 @@
 
             <div class="container-fluid">
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-                <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
-                    <div class="card-wrapper pb-3">
-                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Laporan Penjualan</h5>
-                        <div class="x_panel">
-                            <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('auth/excelpenjualan'); ?>'">+ Export Excell</button>
-                                <!-- <ul class="nav navbar-right panel_toolbox">
+
+                <div class="card-wrapper pb-3">
+                    <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Laporan Penjualan</h5>
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('auth/excelpenjualan'); ?>'">+ Export Excell</button>
+                            <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
                                             </ul> -->
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <table class="table">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Polisi</th>
-                                        <th>Jenis / Tipe</th>
-                                        <th>Warna</th>
-                                        <th>Bahan Bakar</th>
-                                        <th>Tahun Keluaran</th>
-                                        <th>Harga Jual</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $i = 1;
-                                    foreach ($data_laporan as $mobil) { ?>
-                                        <tr>
-                                            <td><?= $i; ?></td>
-                                            <td><?php echo $mobil->no_polis ?></td>
-                                            <td><?php echo $mobil->jenis_typr ?></td>
-                                            <td><?php echo $mobil->warna ?></td>
-                                            <td><?php echo $mobil->bahan_bakar ?></td>
-                                            <td><?php echo $mobil->tahun_keluaran ?></td>
-                                            <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                        </tr>
-                                    <?php $i++;
-                                    } ?>
-                                    <tr style="font-weight: bold;">
-                                        <td colspan="6">Total</td>
-                                        <td>Rp <?php echo number_format($sum_jumlahpenjualan->jumlahpenjualan) ?></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="clearfix"></div>
                         </div>
+                        <div class="navbar-form navbar-right">
+                            <?php echo form_open('searchpenjualan') ?>
+                            <input type="date" name="keyword" class="form-control" placeholder="Search" required>
+                            <button type="submit" class="btn btn-danger btn-xs">Cari</button>
+                            <button type="button" class="btn btn-info btn-xs" onclick="location.href='<?= base_url('laporanpenjualan'); ?>'">Kembali</button>
+                            <?php echo form_close() ?>
+                        </div>
+                        <table class="table">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Polisi</th>
+                                    <th>Jenis / Tipe</th>
+                                    <th>Warna</th>
+                                    <th>Bahan Bakar</th>
+                                    <th>Tahun Keluaran</th>
+                                    <th>Tanggal Penjualan</th>
+                                    <th>Harga Jual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $i = 1;
+                                foreach ($data_laporan as $mobil) { ?>
+                                    <tr>
+                                        <td><?= $i; ?></td>
+                                        <td><?php echo $mobil->no_polis ?></td>
+                                        <td><?php echo $mobil->jenis_typr ?></td>
+                                        <td><?php echo $mobil->warna ?></td>
+                                        <td><?php echo $mobil->bahan_bakar ?></td>
+                                        <td><?php echo $mobil->tahun_keluaran ?></td>
+                                        <td><?php echo $mobil->tgl_jual ?></td>
+                                        <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
+                                    </tr>
+                                <?php $i++;
+                                } ?>
+                                <tr style="font-weight: bold;">
+                                    <td colspan="7">Total</td>
+                                    <td>Rp <?php echo number_format($sum_jumlahpenjualan->jumlahpenjualan) ?></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- Bootstrap core JavaScript -->
-                    <script src="assets/vendor/jquery/jquery.min.js"></script>
-                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                </div>
+                <!-- Bootstrap core JavaScript -->
+                <script src="assets/vendor/jquery/jquery.min.js"></script>
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-                    <!-- Menu Toggle Script -->
-                    <script>
-                        $("#menu-toggle").click(function(e) {
-                            e.preventDefault();
-                            $("#wrapper").toggleClass("toggled");
-                        });
-                    </script>
+                <!-- Menu Toggle Script -->
+                <script>
+                    $("#menu-toggle").click(function(e) {
+                        e.preventDefault();
+                        $("#wrapper").toggleClass("toggled");
+                    });
+                </script>
 </body>
 
 </html>
