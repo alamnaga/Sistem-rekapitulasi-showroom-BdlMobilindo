@@ -18,6 +18,7 @@ header("Expires: 0");
             <th>Warna</th>
             <th>Bahan Bakar</th>
             <th>Tahun Keluaran</th>
+            <th>Tanggal Pembelian</th>
             <th>Harga Jual</th>
         </tr>
     </thead>
@@ -31,12 +32,13 @@ header("Expires: 0");
                 <td><?php echo $pembelian->warna ?></td>
                 <td><?php echo $pembelian->bahan_bakar ?></td>
                 <td><?php echo $pembelian->tahun_keluaran ?></td>
+                <td><?php echo $pembelian->tgl_beli ?></td>
                 <td>Rp <?php echo number_format($pembelian->harga_beli) ?></td>
             </tr>
         <?php endforeach;
         ?>
         <tr style="font-weight: bold;">
-            <td colspan="6">Total</td>
+            <td colspan="7">Total</td>
             <td>Rp <?php echo number_format($sum_jumlah->jumlah) ?></td>
         </tr>
     </tbody>

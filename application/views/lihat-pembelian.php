@@ -78,12 +78,13 @@
                             <table class="table">
                                 <thead class="table-light">
                                     <tr>
-                                        <th>Nama Polisi</th>
+                                        <th>No Polisi</th>
                                         <th>Jenis / Tipe</th>
                                         <th>Warna</th>
                                         <th>Bahan Bakar</th>
                                         <th>Tahun Keluaran</th>
-                                        <th>Harga Beli</th>
+                                        <th>Tanggal Pembelian</th>
+                                        <th>Harga Pembelian</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -95,6 +96,7 @@
                                             <td><?php echo $mobil->warna ?></td>
                                             <td><?php echo $mobil->bahan_bakar ?></td>
                                             <td><?php echo $mobil->tahun_keluaran ?></td>
+                                            <td><?php echo $mobil->tgl_beli ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_beli) ?></td>
                                             <td style=" text-align: center;">
                                                 <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?>
