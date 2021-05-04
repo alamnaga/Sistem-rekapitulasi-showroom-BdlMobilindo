@@ -28,23 +28,23 @@
       <div class="list-group list-group-flush">
         <!-- button dashboard -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
-          Dashboard
+          <img src="assets/img/home.png" style="width: 25px; "> Dashboard
         </button>
         <!-- button mobil -->
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-          Mobil
+        <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
+          <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
         </button>
         <!-- button pembelian -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-          Pembelian
+          <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
         </button>
         <!-- button penjualan -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-          Penjualan
+          <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
         </button>
         <!-- button laporan -->
         <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
-          Laporan
+          <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
         </button>
       </div>
     </div>
@@ -114,6 +114,14 @@
               </div>
               <div class="col-8">
                 <input type="date" name="tgl_beli" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-2 align-items-center m-1">
+              <div class="col-3 ">
+                <label for="text" class="col-form-label">Tgl Jual</label>
+              </div>
+              <div class="col-8">
+                <input type="date" name="tgl_jual" class="form-control" required>
               </div>
             </div>
             <div class="row g-2 align-items-center m-1">
