@@ -7,7 +7,11 @@ class model_penjualan extends CI_Model
         $query = $this->db->order_by('id_jual', 'DESC')->get('penjualan');
         return $query->result();
     }
-
+    public function tabel_penjualanS()
+    {
+        $query = $this->db->get('penjualan');
+        return $query->result();
+    }
     public function tabel_laporan()
     {
         $query = $this->db->order_by('id_jual', 'DESC')->get('penjualan');

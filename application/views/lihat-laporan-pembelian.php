@@ -40,7 +40,7 @@
                     <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatlaporan'); ?>'">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('lihatlaporan'); ?>'">
                     <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
                 </button>
             </div>
@@ -77,8 +77,7 @@
                         <div class="navbar-form navbar-right">
                             <?php echo form_open('searchpembelian') ?>
                             <input type="date" name="keyword" class="form-control" placeholder="Search" required>
-                            <button type="submit" class="btn btn-danger btn-xs">Cari</button>
-                            <button type="button" class="btn btn-info btn-xs" onclick="location.href='<?= base_url('laporanpembelian'); ?>'">Kembali</button>
+                            <button type="submit" class="btn btn-info btn-xs">Cari</button>
                             <?php echo form_close() ?>
                         </div>
                         <table class="table">

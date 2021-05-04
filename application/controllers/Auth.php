@@ -12,6 +12,11 @@ class Auth extends CI_Controller
         $this->load->model('model_penjualan');
     }
 
+    public function count_mobil()
+    {
+        $data['mobil'] = $this->model_mobil->get_count();
+    }
+
     public function lihatmobil()
     {
         $data = array(
@@ -20,6 +25,26 @@ class Auth extends CI_Controller
         );
         $this->load->view('lihat-mobil', $data);
     }
+
+
+
+    // public function status($id_mobil)
+    // {
+    //     $data = $this->db->where('mobil', ['id_mobil' => $id_mobil])->row_array();
+
+    //     $status_sekarang = $data->status;
+
+    //     if ($status_sekarang == 1) {
+    //         $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
+    //             'status' => 0
+    //         ]);
+    //     } else {
+    //         $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
+    //             'status' => 1
+    //         ]);
+    //     }
+    //     return redirect('lihatmobil');
+    // }
 
     public function lihatsearch()
     {
@@ -151,6 +176,7 @@ class Auth extends CI_Controller
             'tahun_keluaran'    => $tahun_keluaran,
             'tgl_jual'          => $tgl_jual,
             'harga_jual'        => $harga_jual,
+            'status'            => 0
             //'harga_beli'        => $harga_beli
         );
 
@@ -168,6 +194,15 @@ class Auth extends CI_Controller
         redirect('lihatmobil');
     }
 
+    // public function status($id_mobil)
+    // {
+    //     $data = array('status' => 1);
+    //     $where = array('id_mobil' => $id_mobil);
+    //     $this->model_mobil->update_data($where, $data, 'mobil');
+    //     $this->model_mobil->InsertDataPenjualan($data);
+    //     redirect(base_url('lihatmobil'));
+    // }
+
     public function hapus_pembelian($id_beli)
     {
         $where = array('id_beli' => $id_beli);
@@ -179,6 +214,7 @@ class Auth extends CI_Controller
     {
         $where = array('id_jual' => $id_jual);
         $this->model_penjualan->hapus_penjualan($where, 'penjualan');
+
         redirect('lihatpenjualan');
     }
 

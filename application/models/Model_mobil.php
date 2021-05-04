@@ -42,7 +42,8 @@ class Model_mobil extends CI_Model
             'warna' => $this->input->post('warna', true),
             'bahan_bakar' => $this->input->post('bahan_bakar', true),
             'tahun_keluaran' => $this->input->post('tahun_keluaran', true),
-            'tgl_jual' => $this->input->post('tgl_jual', true)
+            'tgl_jual' => $this->input->post('tgl_jual', true),
+            'status'   => $this->input->post('status', true)
         ];
 
         $this->db->insert('penjualan', $penjualanmobil);
@@ -55,7 +56,8 @@ class Model_mobil extends CI_Model
             'warna' => $this->input->post('warna', true),
             'bahan_bakar' => $this->input->post('bahan_bakar', true),
             'tahun_keluaran' => $this->input->post('tahun_keluaran', true),
-            'tgl_beli' => $this->input->post('tgl_beli', true)
+            'tgl_beli' => $this->input->post('tgl_beli', true),
+            'status' => $this->input->post('status', true)
         ];
 
         $this->db->insert('pembelian', $pembelianmobil);
@@ -91,6 +93,7 @@ class Model_mobil extends CI_Model
         $this->db->like('no_polis', $keyword);
         $this->db->or_like('jenis_typr', $keyword);
         $this->db->or_like('warna', $keyword);
+        $this->db->or_like('status', $keyword);
 
         return $this->db->get()->result();
     }

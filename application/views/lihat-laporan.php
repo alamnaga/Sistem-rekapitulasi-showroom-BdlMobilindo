@@ -40,7 +40,7 @@
                     <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
                 </button>
             </div>

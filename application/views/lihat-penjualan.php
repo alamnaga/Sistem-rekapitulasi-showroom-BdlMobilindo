@@ -36,7 +36,7 @@
                     <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
@@ -67,7 +67,7 @@
                         <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button>
+                                <!-- <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button> -->
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -84,7 +84,7 @@
                                         <th>Bahan Bakar</th>
                                         <th>Tahun Keluaran</th>
                                         <th>Tanggal Penjualan</th>
-                                        <th>Harga Penjualan</th>
+                                        <th>Harga Terjual</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
