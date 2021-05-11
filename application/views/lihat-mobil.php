@@ -104,36 +104,47 @@
                                     <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
                                     <td><label class="label label-success"><?Php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
                                     <td style=" text-align: center;">
+                                        <?php
+                                        if ($mobil->status == 1) { ?>
+                                            <a href="<?php echo base_url('Auth/status' . $mobil->id_mobil,) ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
+                                        <?php    } else { ?>
+
+
+                                            <a href="<?php echo base_url('Auth/status' . $mobil->id_mobil,) ?>" class="btn btn-sm btn-danger">Non-Aktifkan
+                                            </a>
+                                        <?php    }
+
+                                        ?>
                                         <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
                                         <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?>
-                                        
+
                                         <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
 
                                         <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
+                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
                                             <img src="assets/img/trash.png" style="width: 20px;">
-                                            </button>
+                                        </button>
 
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Apakah anda yakin ingin menghapusnya ?
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                    <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
-                                                </div>
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Apakah anda yakin ingin menghapusnya ?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            </div>
+                                        </div>
 
                                     </td>
                                 </tr>

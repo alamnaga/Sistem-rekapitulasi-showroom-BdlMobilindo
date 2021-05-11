@@ -7,7 +7,6 @@ class Dashboard extends CI_Controller
     {
         $data['user'] = $this->db->get_where('admin', ['user' =>
         $this->session->userdata('user')])->row_array();
-
         $this->load->view('auth/dashboard', $data);
     }
 }
