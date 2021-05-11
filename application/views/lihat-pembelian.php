@@ -32,7 +32,7 @@
                     <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
@@ -99,8 +99,35 @@
                                             <td><?php echo $mobil->tgl_beli ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_beli) ?></td>
                                             <td style=" text-align: center;">
-                                                <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
-                                            </td>
+                                                <!-- <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
+                                                
+                                                <!-- POP UP BUTTON HAPUS -->
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
+                                                <img src="assets/img/trash.png" style="width: 20px;">
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Apakah anda yakin ingin menghapusnya ?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                        <?php echo anchor('Auth/hapus_pembelian/' . $mobil->id_beli, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>

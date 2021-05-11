@@ -92,6 +92,13 @@
             </div>
           </div>
 
+          <div class="row g-2 align-items-center m-1" style="width: 100%;">
+            <div class="col-8">
+              <input type="hidden" id="status" name="status" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->status ?>">
+            </div>
+          </div>
+
+
           <!-- <div class="row g-2 align-items-center m-1">
                 <div class="col-3 ">
                   <label for="text" class="col-form-label">Harga Beli</label>

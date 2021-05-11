@@ -16,37 +16,37 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand"><img src="assets/img/logo.jpg"></div>
-						<div class="card fat">
-							<div class="card-body">
-								<center>
-									<h4 class="card-title">Sisten Rekapitulasi Showroom</h4>
-								</center>
-								<center>
-									<h4 class="card-title">BDL Mobilindo</h4>
-								</center>
-								<form method="post" class="my-login-validation" action="<?= base_url('auth') ?>">
-									<div class="form-group">
-										<label for="user">User</label>
-										<input id="user" type="user" class="form-control" name="user" value="" required autofocus placeholder="Masukan Username" value="<? set_value('user'); ?>">
-										<div class="invalid-feedback">
+					<div class="card fat">
+						<div class="card-body">
+							<center>
+								<h4 class="card-title">Sistem Rekapitulasi Showroom</h4>
+							</center>
+							<center>
+								<h4 class="card-title">BDL Mobilindo</h4>
+							</center>
+							<form method="post" class="my-login-validation" action="<?= base_url('auth') ?>">
+								<div class="form-group">
+									<label for="user">User</label>
+									<input id="user" type="user" class="form-control" name="user" value="" required autofocus placeholder="Masukan Username" value="<? set_value('user'); ?>">
+									<div class="invalid-feedback">
 										User is invalid
-										</div>
 									</div>
+								</div>
 
-									<div class="form-group">
-										<label for="password">Password</label>
-										<input id="password" type="password" class="form-control" name="password" value="" required autofocus placeholder="Masukan Password" value="<? set_value('user'); ?>">
-										<div class="invalid-feedback">
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input id="password" type="password" class="form-control" name="password" value="" required autofocus placeholder="Masukan Password" value="<? set_value('user'); ?>">
+									<div class="invalid-feedback">
 										Password is required
-										</div>
 									</div>
-									<button type="submit" class="btn btn-primary btn-block" style="margin-top: 30px;">Login</button>
-								</form>
-							</div>
-						</div>		
+								</div>
+								<button type="submit" class="btn btn-primary btn-block" style="margin-top: 30px;">Login</button>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 	</section>
 

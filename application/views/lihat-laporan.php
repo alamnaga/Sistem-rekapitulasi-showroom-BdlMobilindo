@@ -40,7 +40,7 @@
                     <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/laporan.png" style="width: 25px; "> Laporan
                 </button>
             </div>
@@ -64,7 +64,6 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <div class="card-wrapper pb-3">
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat laporan</h5>
-
                     <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('laporanpenjualan'); ?>'">+ Laporan Penjualan</button>
                     <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('laporanpembelian'); ?>'">+ Laporan Pembelian</button>
                 </div>

@@ -28,7 +28,7 @@
                     <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/mobil.png" style="width: 25px; "> Mobil
                 </button>
                 <!-- button pembelian -->
@@ -64,14 +64,14 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
 
                 <div class="card-wrapper pb-3">
-                    <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Informasi Mobil</h5>
+                    <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Data Mobil</h5>
 
                     <!-- search-->
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
                         <input type="text" name="keyword" class="form-control" placeholder="Search" required>
-                        <button type="submit" class="btn btn-danger btn-xs">Cari</button>
-                        <button type="button" class="btn btn-info btn-xs" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Kembali</button>
+                        <button type="submit" class="btn btn-info btn-xs">Cari</button>
+                        <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Kembali</button>
                         <?php echo form_close() ?>
                     </div>
 
@@ -84,6 +84,7 @@
                                 <th>Bahan Bakar</th>
                                 <th>Tahun Keluaran</th>
                                 <th>Harga Jual</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -97,9 +98,10 @@
                                     <td><?php echo $mobil->bahan_bakar ?></td>
                                     <td><?php echo $mobil->tahun_keluaran ?></td>
                                     <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
+                                    <td><label class="label label-success"><?Php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
                                     <td style=" text-align: center;">
-                                        <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-info btn-xs" type="button"><span  class="fa fa-pencil fa-3x"></span></button>'); ?>
-                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
+                                        <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?>
+                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?>
                                     </td>
                                 </tr>
                             <?php } ?>

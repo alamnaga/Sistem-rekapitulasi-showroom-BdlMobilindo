@@ -36,7 +36,7 @@
                     <img src="assets/img/cart.png" style="width: 25px; "> Pembelian
                 </button>
                 <!-- button penjualan -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" style="background-color: rgb(44, 44, 44);" class="btn btn-secondary" aria-expanded="false">
                     <img src="assets/img/sales.png" style="width: 25px; "> Penjualan
                 </button>
                 <!-- button laporan -->
@@ -67,7 +67,7 @@
                         <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
-                                <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button>
+                                <!-- <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button> -->
                                 <!-- <ul class="nav navbar-right panel_toolbox">
                                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
                                                 <li><a class="close-link"><i class="fa fa-close"></i></a></li>
@@ -84,7 +84,7 @@
                                         <th>Bahan Bakar</th>
                                         <th>Tahun Keluaran</th>
                                         <th>Tanggal Penjualan</th>
-                                        <th>Harga Penjualan</th>
+                                        <th>Harga Terjual</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -99,7 +99,35 @@
                                             <td><?php echo $mobil->tgl_jual ?></td>
                                             <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
                                             <td style=" text-align: center;">
-                                                <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button class="btn btn-danger btn-xs" type="button"><span class="fa fa-trash fa-3x"></span></button>'); ?>
+                                                <!-- <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button class="btn btn-danger btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
+                                                
+                                                <!-- POP UP BUTTON HAPUS -->
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
+                                                <img src="assets/img/trash.png" style="width: 20px;">
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Apakah anda yakin ingin menghapusnya ?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                        <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            
                                             </td>
                                         </tr>
                                     <?php } ?>
