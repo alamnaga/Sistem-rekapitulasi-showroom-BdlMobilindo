@@ -24,7 +24,7 @@
             <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
             <div class="list-group list-group-flush">
                 <!-- button dashboard -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('dashboard'); ?>'">
                     <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
@@ -69,14 +69,25 @@
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
                         <div class="row g-2 align-items-center m-1 p-2">
-                        <div class="col-11">
-                            <input type="text" name="keyword" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-info btn-xs">Cari</button>
+                            <div class="col-11">
+                                <input type="text" name="keyword" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-xs">Cari</button>
 
                         </div>
                         <?php echo form_close() ?>
 
+
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Check Status
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?php echo base_url('Tersedia') ?>">Tersedia</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Terjual') ?>">Terjual</a>
+                        </div>
                     </div>
 
                     <table class="table table-bordered">
@@ -102,11 +113,11 @@
                                     <td><?php echo $mobil->bahan_bakar ?></td>
                                     <td><?php echo $mobil->tahun_keluaran ?></td>
                                     <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                    <td><label class="label label-success"><?Php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
+                                    <td><label class="label label-success"><?php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
                                     <td style=" text-align: center;">
-                                        <?php
-                                        if ($mobil->status == 1) { ?>
-                                            <a href="<?php echo base_url('Auth/status' . $mobil->id_mobil,) ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
+                                        <!-- <?php
+                                                if ($mobil->status == 1) { ?>
+                                            <a href="<?php echo base_url('search1') ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
                                         <?php    } else { ?>
 
 
@@ -114,7 +125,8 @@
                                             </a>
                                         <?php    }
 
-                                        ?>
+                                        ?> -->
+
                                         <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
                                         <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?>
 
