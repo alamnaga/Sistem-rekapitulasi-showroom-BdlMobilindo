@@ -68,8 +68,13 @@
 
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
-                        <input type="text" name="keyword" class="form-control" style="" placeholder="Search" required>
+                        <div class="row g-2 align-items-center m-1 p-2">
+                        <div class="col-11">
+                            <input type="text" name="keyword" class="form-control" required>
+                        </div>
                         <button type="submit" class="btn btn-info btn-xs">Cari</button>
+
+                        </div>
                         <?php echo form_close() ?>
 
                     </div>
