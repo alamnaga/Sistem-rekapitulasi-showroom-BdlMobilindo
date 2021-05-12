@@ -20,19 +20,19 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Mobil</h5>
-          <p class="card-text">10</p>
+          <p class="card-text"><?= $jumlah_mobil ?></p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Penjualan</h5>
-          <p class="card-text">10</p>
+          <p class="card-text"><?= $jumlah_terjual ?></p>
         </div>
       </div>
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Pembelian</h5>
-          <p class="card-text">10</p>
+          <p class="card-text"><?= $jumlah_tersedia ?></p>
         </div>
       </div>
     </div>
