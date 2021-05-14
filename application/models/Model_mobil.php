@@ -80,6 +80,7 @@ class Model_mobil extends CI_Model
         $this->db->where($where);
         $this->db->update($table, $data);
     }
+
     public function hapus_mobil($where, $table)
     {
         $this->db->where($where);
@@ -93,14 +94,45 @@ class Model_mobil extends CI_Model
         $this->db->like('no_polis', $keyword);
         $this->db->or_like('jenis_typr', $keyword);
         $this->db->or_like('warna', $keyword);
-        $this->db->or_like('status', $keyword);
 
         return $this->db->get()->result();
     }
-    // public function jumlah()
-    // {
-    //     $this->db->select('*');
-    //     $this->db->from('mobil');
-    //     return $this->db->get()->num_rows();
-    // }
+    public function jumlah_mobil()
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        return $this->db->get()->num_rows();
+    }
+
+    public function jumlah_terjual()
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        $this->db->where('status', 0);
+        return $this->db->get()->num_rows();
+    }
+
+    public function jumlah_tersedia()
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        $this->db->where('status', 1);
+        return $this->db->get()->num_rows();
+    }
+
+    public function tersedia()
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        $this->db->where('status', 1);
+        return $this->db->get()->result();
+    }
+
+    public function terjual()
+    {
+        $this->db->select('*');
+        $this->db->from('mobil');
+        $this->db->where('status', 0);
+        return $this->db->get()->result();
+    }
 }

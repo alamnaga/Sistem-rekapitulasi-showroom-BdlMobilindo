@@ -12,9 +12,12 @@ class Auth extends CI_Controller
         $this->load->model('model_penjualan');
     }
 
-    public function count_mobil()
+    public function dashboard()
     {
-        $data['mobil'] = $this->model_mobil->get_count();
+        $data['jumlah_mobil'] = $this->model_mobil->jumlah_mobil();
+        $data['jumlah_terjual'] = $this->model_mobil->jumlah_terjual();
+        $data['jumlah_tersedia'] = $this->model_mobil->jumlah_tersedia();
+        return $this->load->view('auth/dashboard', $data);
     }
 
     public function lihatmobil()
@@ -27,24 +30,24 @@ class Auth extends CI_Controller
     }
 
 
+    public function status($id_mobil)
+    {
+        $data = $this->db->where('mobil', ['id_mobil' => $id_mobil])->result();
 
-    // public function status($id_mobil)
-    // {
-    //     $data = $this->db->where('mobil', ['id_mobil' => $id_mobil])->row_array();
+        $status_sekarang = $data->status;
 
-    //     $status_sekarang = $data->status;
-
-    //     if ($status_sekarang == 1) {
-    //         $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
-    //             'status' => 0
-    //         ]);
-    //     } else {
-    //         $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
-    //             'status' => 1
-    //         ]);
-    //     }
-    //     return redirect('lihatmobil');
-    // }
+        if ($status_sekarang == 1) {
+            $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
+                'status' => 0
+            ]);
+        } else {
+            $this->db->where('mobil', ['id_mobil' => $id_mobil])->update([
+                'status' => 1
+            ]);
+        }
+        $this->load->view('lihat-mobil', $status_sekarang);
+        // return redirect('lihatmobil');
+    }
 
     public function lihatsearch()
     {
@@ -57,6 +60,25 @@ class Auth extends CI_Controller
         $this->load->view('lihat-search', $data);
     }
 
+    public function searchTersedia()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            //'data_mobil' => $this->model_mobil->tabel_mobil()
+        );
+        $data['data_mobil'] = $this->model_mobil->tersedia();
+        $this->load->view('lihat-search', $data);
+    }
+
+    public function searchTerjual()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            //'data_mobil' => $this->model_mobil->tabel_mobil()
+        );
+        $data['data_mobil'] = $this->model_mobil->terjual();
+        $this->load->view('lihat-search', $data);
+    }
 
     public function lihatpembelian()
     {
