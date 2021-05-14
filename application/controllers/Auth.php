@@ -175,7 +175,6 @@ class Auth extends CI_Controller
     {
         $where = array('id_mobil' => $id_mobil);
         $data['data_mobil'] = $this->model_mobil->edit_data($where, 'mobil')->result();
-        $this->load->view('ubah-mobil', $data);
     }
 
     public function update()

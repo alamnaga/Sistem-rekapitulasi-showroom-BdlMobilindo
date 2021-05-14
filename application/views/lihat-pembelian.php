@@ -64,7 +64,7 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <form action="<?php echo base_url('Auth/AksiBeli') ?>" method="post">
                     <div class="card-wrapper pb-3">
-                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Pembelian</h5>
+                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Data Pembelian</h5>
                         <div class="x_panel">
                             <div class="x_title">
                                 <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahbeli'); ?>'">+ Tambah Pembelian</button>

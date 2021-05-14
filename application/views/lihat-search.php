@@ -70,7 +70,6 @@
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
                         <input type="text" name="keyword" class="form-control" placeholder="Search" required>
-                        <button type="submit" class="btn btn-info btn-xs">Cari</button>
                         <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Kembali</button>
                         <?php echo form_close() ?>
                     </div>
