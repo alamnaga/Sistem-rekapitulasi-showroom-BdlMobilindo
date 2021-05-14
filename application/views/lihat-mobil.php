@@ -128,11 +128,55 @@
                                         ?> -->
 
                                         <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
-                                        <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?>
+                                        <!-- <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?> -->
 
-                                        <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
+                                        <!-- Button Edit -->
+                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
+                                        <img src="assets/img/edit.png" style="width: 20px;">
+                                        </button>
 
-                                        <!-- Button trigger modal -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Ubah Informasi Mobil</h5>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row g-2 align-items-center m-1">
+                                                            <div class="col-3 ">
+                                                                <label for="text" class="col-form-label">No. Polisi</label>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <input type="text" name="no_polis" class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-2 align-items-center m-1">
+                                                            <div class="col-3 ">
+                                                                <label for="text" class="col-form-label">No. Polisi</label>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <input type="text" name="no_polis" class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-2 align-items-center m-1">
+                                                            <div class="col-3 ">
+                                                                <label for="text" class="col-form-label">No. Polisi</label>
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <input type="text" name="no_polis" class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Ubah</button>'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Button Hapus -->
                                         <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
                                             <img src="assets/img/trash.png" style="width: 20px;">
                                         </button>
