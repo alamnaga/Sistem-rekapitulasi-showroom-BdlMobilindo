@@ -130,9 +130,11 @@
                                         <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
                                         <!-- <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?> -->
 
+
                                         <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
                                             <img src="assets/img/edit.png" style="width: 20px;">
                                         </button>
+
 
                                         <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
 
