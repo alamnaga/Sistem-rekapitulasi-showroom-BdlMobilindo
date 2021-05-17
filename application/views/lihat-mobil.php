@@ -247,7 +247,7 @@
                     </div>
 
                     <div class="row g-2 align-items-center m-1" style="width: 100%;">
-                        <button type="reset" class="btn btn-danger" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
+                        <button type="reset" class="btn btn-secondary m-2 pl-3" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
                         <button type="submit" class="btn btn-success">Simpan</button>
                     </div>
                 </form>
