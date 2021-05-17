@@ -77,8 +77,7 @@
                         <div class="navbar-form navbar-right">
                             <?php echo form_open('searchpenjualan') ?>
                             <input type="date" name="keyword" class="form-control" placeholder="Search" required>
-                            <button type="submit" class="btn btn-danger btn-xs">Cari</button>
-                            <button type="button" class="btn btn-info btn-xs" onclick="location.href='<?= base_url('laporanpenjualan'); ?>'">Kembali</button>
+                            <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('laporanpenjualan'); ?>'">Kembali</button>
                             <?php echo form_close() ?>
                         </div>
                         <table class="table">
@@ -91,7 +90,7 @@
                                     <th>Bahan Bakar</th>
                                     <th>Tahun Keluaran</th>
                                     <th>Tanggal Penjualan</th>
-                                    <th>Harga Penjualn</th>
+                                    <th>Harga Penjualan</th>
                                 </tr>
                             </thead>
                             <tbody>

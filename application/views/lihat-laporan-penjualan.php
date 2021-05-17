@@ -91,7 +91,7 @@
                                     <th>Bahan Bakar</th>
                                     <th>Tahun Keluaran</th>
                                     <th>Tanggal Penjualan</th>
-                                    <th>Harga Jual</th>
+                                    <th>Harga Terjual</th>
                                 </tr>
                             </thead>
                             <tbody>

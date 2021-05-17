@@ -76,8 +76,7 @@
                         <div class="navbar-form navbar-right">
                             <?php echo form_open('searchpembelian') ?>
                             <input type="date" name="keyword" class="form-control" placeholder="Search" required>
-                            <button type="submit" class="btn btn-info btn-xs">Cari</button>
-                            <button type="button" class="btn btn-info btn-xs" onclick="location.href='<?= base_url('laporanpembelian'); ?>'">Kembali</button>
+                            <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('laporanpembelian'); ?>'">Kembali</button>
                             <?php echo form_close() ?>
                         </div>
                         <table class="table">

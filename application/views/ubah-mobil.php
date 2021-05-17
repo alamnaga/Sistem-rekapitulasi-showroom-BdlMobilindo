@@ -98,17 +98,6 @@
             </div>
           </div>
 
-
-          <!-- <div class="row g-2 align-items-center m-1">
-                <div class="col-3 ">
-                  <label for="text" class="col-form-label">Harga Beli</label>
-                </div>
-                <div class="col-8">
-                  <input type="text" id="harga_beli" name="harga_beli" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_beli ?>">
-                </div>
-              </div> -->
-
-
           <div class="row g-2 align-items-center m-1" style="width: 100%;">
             <button type="reset" class="btn btn-danger" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
             <button type="submit" class="btn btn-success">Simpan</button>
