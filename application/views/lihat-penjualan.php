@@ -24,7 +24,7 @@
             <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
             <div class="list-group list-group-flush">
                 <!-- button dashboard -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('dashboard'); ?>'">
                     <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
@@ -64,7 +64,7 @@
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
                 <form action="<?php echo base_url('Auth/AksiInsert') ?>" method="post">
                     <div class="card-wrapper pb-3">
-                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Lihat Penjualan</h5>
+                        <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Data Penjualan</h5>
                         <div class="x_panel">
                             <div class="x_title">
                                 <!-- <button type="button" class="btn btn-success" onclick="location.href='<?= base_url('Tambahjual'); ?>'">+ Tambah Penjualan</button> -->
@@ -100,34 +100,15 @@
                                             <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
                                             <td style=" text-align: center;">
                                                 <!-- <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button class="btn btn-danger btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
-                                                
+
                                                 <!-- POP UP BUTTON HAPUS -->
+
                                                 <!-- Button trigger modal -->
-                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
-                                                <img src="assets/img/trash.png" style="width: 20px;">
+                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#hapus<?php echo $mobil->id_jual ?>">
+                                                    <img src="assets/img/trash.png" style="width: 20px;">
                                                 </button>
 
-                                                <!-- Modal -->
-                                                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapusnya ?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            
+
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -147,5 +128,27 @@
                         });
                     </script>
 </body>
+<!-- Modal -->
+<?php foreach ($data_penjualan  as $mobil) { ?>
+    <div class="modal fade" id="hapus<?php echo $mobil->id_jual ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah anda yakin ingin menghapusnya ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <?php echo anchor('Auth/hapus_penjualan/' . $mobil->id_jual, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 
 </html>

@@ -24,7 +24,7 @@
             <div class="sidebar-heading"><img src="assets/img/logo.jpg " width="200"></div>
             <div class="list-group list-group-flush">
                 <!-- button dashboard -->
-                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('Dashboard'); ?>'">
+                <button id="btnGroupDrop1" type="button" class="btn btn-secondary" aria-expanded="false" onclick="location.href='<?= base_url('dashboard'); ?>'">
                     <img src="assets/img/home.png" style="width: 25px; "> Dashboard
                 </button>
                 <!-- button mobil -->
@@ -69,14 +69,25 @@
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
                         <div class="row g-2 align-items-center m-1 p-2">
-                        <div class="col-11">
-                            <input type="text" name="keyword" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-info btn-xs">Cari</button>
+                            <div class="col-11">
+                                <input type="text" name="keyword" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-xs">Cari</button>
 
                         </div>
                         <?php echo form_close() ?>
 
+
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            Status Mobil
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="<?php echo base_url('Tersedia') ?>">Tersedia</a>
+                            <a class="dropdown-item" href="<?php echo base_url('Terjual') ?>">Terjual</a>
+                        </div>
                     </div>
 
                     <table class="table table-bordered">
@@ -102,11 +113,11 @@
                                     <td><?php echo $mobil->bahan_bakar ?></td>
                                     <td><?php echo $mobil->tahun_keluaran ?></td>
                                     <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                    <td><label class="label label-success"><?Php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
+                                    <td><label class="label label-success"><?php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
                                     <td style=" text-align: center;">
-                                        <?php
-                                        if ($mobil->status == 1) { ?>
-                                            <a href="<?php echo base_url('Auth/status' . $mobil->id_mobil,) ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
+                                        <!-- <?php
+                                                if ($mobil->status == 1) { ?>
+                                            <a href="<?php echo base_url('search1') ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
                                         <?php    } else { ?>
 
 
@@ -114,81 +125,23 @@
                                             </a>
                                         <?php    }
 
-                                        ?>
+                                        ?> -->
+
                                         <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
                                         <!-- <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?> -->
 
-                                        <!-- Button Edit -->
-                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
-                                        <img src="assets/img/edit.png" style="width: 20px;">
+
+                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
+                                            <img src="assets/img/edit.png" style="width: 20px;">
                                         </button>
 
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Ubah Informasi Mobil</h5>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row g-2 align-items-center m-1">
-                                                            <div class="col-3 ">
-                                                                <label for="text" class="col-form-label">No. Polisi</label>
-                                                            </div>
-                                                            <div class="col-8">
-                                                                <input type="text" name="no_polis" class="form-control" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row g-2 align-items-center m-1">
-                                                            <div class="col-3 ">
-                                                                <label for="text" class="col-form-label">No. Polisi</label>
-                                                            </div>
-                                                            <div class="col-8">
-                                                                <input type="text" name="no_polis" class="form-control" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row g-2 align-items-center m-1">
-                                                            <div class="col-3 ">
-                                                                <label for="text" class="col-form-label">No. Polisi</label>
-                                                            </div>
-                                                            <div class="col-8">
-                                                                <input type="text" name="no_polis" class="form-control" required>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Ubah</button>'); ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <!-- Button Hapus -->
-                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#exampleModalCenter" id="btnaksi">
+                                        <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
+
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#hapus<?php echo $mobil->id_mobil ?>">
                                             <img src="assets/img/trash.png" style="width: 20px;">
                                         </button>
-
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        Apakah anda yakin ingin menghapusnya ?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                                                        <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
 
                                     </td>
                                 </tr>
@@ -209,5 +162,95 @@
                 });
             </script>
 </body>
+<!-- Modal -->
+<?php foreach ($data_mobil  as $mobil) { ?>
+    <div class="modal fade" id="hapus<?php echo $mobil->id_mobil ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Peringatan !</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah anda yakin ingin menghapusnya ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button type="button" class="btn btn-danger">Hapus</button>'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+<?php foreach ($data_mobil  as $mobil) { ?>
+    <div class="modal fade" id="edit<?php echo  $mobil->id_mobil ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="edit<?php echo  $mobil->id_mobil ?>">Ubah Informasi Mobil</h5>
+                </div>
+                <form action="<?php echo base_url() . 'auth/update'; ?>" method="post">
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class=" col-3 ">
+                            <label for=" text" class="col-form-label">No. Polisi</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="hidden" name="id_mobil" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->id_mobil ?>">
+                            <input type="text" id="no_polis" name="no_polis" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->no_polis ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class=" col-3">
+                            <label for="text" class="col-form-label">Jenis/Merk</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="jenis_typr" name="jenis_typr" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->jenis_typr ?>">
+                            <input type="hidden" id="warna" name="warna" class="form-control" class="col-form-label" value="<?php echo $mobil->warna ?>">
+                            <input type="hidden" id="bahan_bakar" name="bahan_bakar" class="form-control" class="col-form-label" value="<?php echo $mobil->bahan_bakar ?>">
+                            <input type="hidden" id="tahun_keluaran" name="tahun_keluaran" class="form-control" class="col-form-label" value="<?php echo $mobil->tahun_keluaran ?>">
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class="col-3 ">
+                            <label for="text" class="col-form-label">Tgl jual</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="date" id="tgl_jual" name="tgl_jual" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->tgl_jual ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class="col-3 ">
+                            <label for="text" class="col-form-label">Harga Jual</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="harga_jual" name="harga_jual" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_jual ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class="col-8">
+                            <input type="hidden" id="status" name="status" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->status ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <button type="reset" class="btn btn-danger" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Batal</button>
+                        <button type="submit" class="btn btn-success">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php } ?>
 
 </html>

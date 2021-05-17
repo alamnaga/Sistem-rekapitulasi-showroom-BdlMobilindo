@@ -45,7 +45,8 @@ class Auth extends CI_Controller
                 'status' => 1
             ]);
         }
-        return redirect('lihatmobil');
+        $this->load->view('lihat-mobil', $status_sekarang);
+        // return redirect('lihatmobil');
     }
 
     public function lihatsearch()
@@ -59,6 +60,25 @@ class Auth extends CI_Controller
         $this->load->view('lihat-search', $data);
     }
 
+    public function searchTersedia()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            //'data_mobil' => $this->model_mobil->tabel_mobil()
+        );
+        $data['data_mobil'] = $this->model_mobil->tersedia();
+        $this->load->view('lihat-search', $data);
+    }
+
+    public function searchTerjual()
+    {
+        $data = array(
+            'title' => 'Data Mobil',
+            //'data_mobil' => $this->model_mobil->tabel_mobil()
+        );
+        $data['data_mobil'] = $this->model_mobil->terjual();
+        $this->load->view('lihat-search', $data);
+    }
 
     public function lihatpembelian()
     {
@@ -155,7 +175,6 @@ class Auth extends CI_Controller
     {
         $where = array('id_mobil' => $id_mobil);
         $data['data_mobil'] = $this->model_mobil->edit_data($where, 'mobil')->result();
-        $this->load->view('ubah-mobil', $data);
     }
 
     public function update()
