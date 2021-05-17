@@ -19,7 +19,7 @@ header("Expires: 0");
             <th>Bahan Bakar</th>
             <th>Tahun Keluaran</th>
             <th>Tanggal Penjualan</th>
-            <th>Harga Jual</th>
+            <th>Harga Penjualan</th>
         </tr>
     </thead>
     <tbody>

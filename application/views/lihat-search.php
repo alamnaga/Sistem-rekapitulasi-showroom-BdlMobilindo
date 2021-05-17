@@ -160,7 +160,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="edit<?php echo  $mobil->id_mobil ?>">Ubah Informasi Mobil</h5>
+                    <h5 class="modal-title" id="edit<?php echo  $mobil->id_mobil ?>">Ubah</h5>
                 </div>
                 <form action="<?php echo base_url() . 'auth/update'; ?>" method="post">
                     <div class="row g-2 align-items-center m-1" style="width: 100%;">
@@ -179,9 +179,33 @@
                         </div>
                         <div class="col-8">
                             <input type="text" id="jenis_typr" name="jenis_typr" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->jenis_typr ?>">
-                            <input type="hidden" id="warna" name="warna" class="form-control" class="col-form-label" value="<?php echo $mobil->warna ?>">
-                            <input type="hidden" id="bahan_bakar" name="bahan_bakar" class="form-control" class="col-form-label" value="<?php echo $mobil->bahan_bakar ?>">
-                            <input type="hidden" id="tahun_keluaran" name="tahun_keluaran" class="form-control" class="col-form-label" value="<?php echo $mobil->tahun_keluaran ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class=" col-3">
+                            <label for="text" class="col-form-label">Warna</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="warna" name="warna" class="form-control" class="col-form-label" value="<?php echo $mobil->warna ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class=" col-3">
+                            <label for="text" class="col-form-label">Bahan Bakar</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="bahan_bakar" name="bahan_bakar" class="form-control" class="col-form-label" value="<?php echo $mobil->bahan_bakar ?>">
+                        </div>
+                    </div>
+
+                    <div class="row g-2 align-items-center m-1" style="width: 100%;">
+                        <div class=" col-3">
+                            <label for="text" class="col-form-label">Tahun</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="tahun_keluaran" name="tahun_keluaran" class="form-control" class="col-form-label" value="<?php echo $mobil->tahun_keluaran ?>">
                         </div>
                     </div>
 
@@ -210,7 +234,7 @@
                     </div>
 
                     <div class="row g-2 align-items-center m-1" style="width: 100%;">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Batal</button>
                         <button type="submit" class="btn btn-success">Simpan</button>
                     </div>
                 </form>

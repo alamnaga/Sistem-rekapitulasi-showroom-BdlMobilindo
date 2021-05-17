@@ -108,7 +108,7 @@ class Model_mobil extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('mobil');
-        $this->db->where('status', 0);
+        $this->db->where('status', 1);
         return $this->db->get()->num_rows();
     }
 
@@ -116,7 +116,7 @@ class Model_mobil extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('mobil');
-        $this->db->where('status', 1);
+        $this->db->where('status', 0);
         return $this->db->get()->num_rows();
     }
 

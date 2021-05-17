@@ -46,14 +46,13 @@ class Auth extends CI_Controller
             ]);
         }
         $this->load->view('lihat-mobil', $status_sekarang);
-        // return redirect('lihatmobil');
     }
 
     public function lihatsearch()
     {
         $data = array(
             'title' => 'Data Mobil',
-            //'data_mobil' => $this->model_mobil->tabel_mobil()
+
         );
         $keyword = $this->input->post('keyword');
         $data['data_mobil'] = $this->model_mobil->get_keyword($keyword);
@@ -64,7 +63,7 @@ class Auth extends CI_Controller
     {
         $data = array(
             'title' => 'Data Mobil',
-            //'data_mobil' => $this->model_mobil->tabel_mobil()
+
         );
         $data['data_mobil'] = $this->model_mobil->tersedia();
         $this->load->view('lihat-search', $data);
@@ -124,31 +123,6 @@ class Auth extends CI_Controller
 
     public function AksiInsert()
     {
-        // $no_polis = $this->input->post('no_polis');
-        // $jenis_typr = $this->input->post('jenis_typr');
-        // $warna = $this->input->post('warna');
-        // $bahan_bakar = $this->input->post('bahan_bakar');
-        // $tahun_keluaran = $this->input->post('tahun_keluaran');
-        // $tgl_beli = $this->input->post('tgl_beli');
-        // $harga_jual = $this->input->post('harga_jual');
-        // $harga_beli = $this->input->post('harga_beli');
-
-
-        // $DataInsert = array(
-        //     'no_polis' => $no_polis,
-        //     'jenis_typr' => $jenis_typr,
-        //     'warna' => $warna,
-        //     'bahan_bakar' => $bahan_bakar,
-        //     'tahun_keluaran' => $tahun_keluaran,
-        //     'tgl_beli' => $tgl_beli,
-        //     'harga_jual' => $harga_jual,
-        //     'harga_beli' => $harga_beli,
-        // );
-
-        // echo "<pre>";
-        // print_r($DataInsert);
-        // echo "</pre>";
-        // $this->model_mobil->InsertDataMobil($DataInsert);
         $this->load->model('Model_mobil', 'model');
         $this->model->insert();
         redirect(base_url('lihatmobil'));
@@ -163,8 +137,6 @@ class Auth extends CI_Controller
 
     public function AksiJual()
     {
-        // $this->load->model('Model_jual', 'modeljual');
-        // $this->modeljual->tambah();
         $this->load->model('Model_jual', 'modeljual');
         $this->modeljual->tambah();
 
@@ -203,7 +175,7 @@ class Auth extends CI_Controller
 
         $where = array('id_mobil' => $id_mobil);
         $this->model_mobil->update_data($where, $data, 'mobil');
-        // $this->session->set_flashdata('mobil', 'Data berhasil diperbarui');
+
         $this->model_mobil->InsertDataPenjualan($data);
         redirect(base_url('lihatmobil'));
     }
@@ -214,15 +186,6 @@ class Auth extends CI_Controller
         $this->model_mobil->hapus_mobil($where, 'mobil');
         redirect('lihatmobil');
     }
-
-    // public function status($id_mobil)
-    // {
-    //     $data = array('status' => 1);
-    //     $where = array('id_mobil' => $id_mobil);
-    //     $this->model_mobil->update_data($where, $data, 'mobil');
-    //     $this->model_mobil->InsertDataPenjualan($data);
-    //     redirect(base_url('lihatmobil'));
-    // }
 
     public function hapus_pembelian($id_beli)
     {
@@ -258,65 +221,6 @@ class Auth extends CI_Controller
         $data['sum_jumlah'] = $this->model_pembelian->get_sum();
         $this->load->view('excel/excelpembelian', $data);
     }
-
-    // public function excelsearchpenjualan()
-    // {
-    //     // $data = array(
-    //     //     'title' => 'Rekap Laporan Penjualan',
-    //     //     'data_penjualan' => $this->model_penjualan->tabel_penjualan()
-    //     // );
-    //     // $keyword = $this->input->post('keyword');
-    //     // $data['sum_jumlahpenjualan'] = $this->model_penjualan->get_sumpenjualan($keyword);
-    //     $data['data_penjualan'] = $this->model_penjualan->tabel_penjualanS();
-    //     //$this->load->view('excel/excelsearch-penjualan', $data);
-    //     require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel.php');
-    //     require(APPPATH . 'PHPExcel-1.8/Classes/PHPExcel/Writer/Excel2007.php');
-
-    //     $object = new PHPExcel();
-    //     $object->getProperties()->setCreator("TIM PTI KITA BISA");
-    //     $object->getProperties()->setLastModifiedBy("TIM PTI KITA BISA");
-    //     $object->getProperties()->setTitle("Laporan Penjualan S");
-
-    //     $object->setActiveSheetIndex(0);
-
-    //     $object->getActiveSheet()->setCellValue('A1', 'No');
-    //     $object->getActiveSheet()->setCellValue('B1', 'No Polisi');
-    //     $object->getActiveSheet()->setCellValue('C1', 'Jenis/Tipe');
-    //     $object->getActiveSheet()->setCellValue('D1', 'Warna');
-    //     $object->getActiveSheet()->setCellValue('E1', 'Bahan Bakar');
-    //     $object->getActiveSheet()->setCellValue('F1', 'Tahun Keluaran');
-    //     $object->getActiveSheet()->setCellValue('G1', 'Tanggal Penjualan');
-    //     $object->getActiveSheet()->setCellValue('H1', 'Harga Penjualan');
-
-    //     $baris = 2;
-    //     $no = 1;
-
-    //     foreach ($data_penjualan as $penjual) {
-    //         $object->getActiveSheet()->setCellValue('A' . $baris, $no++);
-    //         $object->getActiveSheet()->setCellValue('B' . $baris, $penjual->no_polis);
-    //         $object->getActiveSheet()->setCellValue('C' . $baris, $penjual->jenis_typr);
-    //         $object->getActiveSheet()->setCellValue('D' . $baris, $penjual->warna);
-    //         $object->getActiveSheet()->setCellValue('E' . $baris, $penjual->bahan_bakar);
-    //         $object->getActiveSheet()->setCellValue('F' . $baris, $penjual->tahun_keluaran);
-    //         $object->getActiveSheet()->setCellValue('G' . $baris, $penjual->tgl_jual);
-    //         $object->getActiveSheet()->setCellValue('H' . $baris, $penjual->harga_jual);
-
-    //         $baris++;
-    //     }
-    //     $filename = 'LaporanPenjualan' . '.xlsx';
-    //     $object->getActiveSheet()->setTitle("Laporan Penjualan S");
-
-    //     header('Content-type: application/
-    //     vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    //     header('Content-Disposition: attachment;filename"' . $filename . '"');
-    //     header('Cache-Control: max-age=0');
-
-    //     $writer = PHPExcel_IOFactory::createWriter($object, 'Excel2007');
-    //     ob_end_clean();
-    //     $writer->save('php://output');
-
-    //     exit;
-    // }
 
     public function excelsearchpembelian()
     {

@@ -59,7 +59,6 @@ $route['Tersedia'] = 'auth/searchTersedia';
 $route['Terjual'] = 'auth/searchTerjual';
 $route['dashboard'] = 'auth/dashboard';
 $route['searchpembelian'] = 'auth/lihatsearchpembelian';
-$route['searchpembelian1'] = 'auth/excelsearchpembelian';
 $route['searchpenjualan'] = 'auth/lihatsearchpenjualan';
 $route['lihatpembelian'] = 'auth/lihatpembelian';
 $route['lihatpenjualan'] = 'auth/lihatpenjualan';
