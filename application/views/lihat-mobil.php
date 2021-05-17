@@ -62,64 +62,64 @@
 
             <div class="container-fluid">
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-                
-                
+
+
                 <div class="card-wrapper pb-3">
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;"> Data Mobil </h5>
                     <div class="x_panel">
-                    <div class="x_title">
+                        <div class="x_title">
 
-                    <div class="navbar-form navbar-right">
-                        <?php echo form_open('search') ?>
-                        <div class="row g-2 align-items-center p-2">
-                            <div class="col-11">
-                                <input type="text" name="keyword" class="form-control" required>
+                            <div class="navbar-form navbar-right">
+                                <?php echo form_open('search') ?>
+                                <div class="row g-2 align-items-center p-2">
+                                    <div class="col-11">
+                                        <input type="text" name="keyword" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-xs">Cari</button>
+
+                                </div>
+                                <?php echo form_close() ?>
+
+
                             </div>
-                            <button type="submit" class="btn btn-info btn-xs">Cari</button>
 
-                        </div>
-                        <?php echo form_close() ?>
+                            <div class="dropdown mb-2 mt-2 pl-2">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                    Status Mobil
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="<?php echo base_url('Tersedia') ?>">Tersedia</a>
+                                    <a class="dropdown-item" href="<?php echo base_url('Terjual') ?>">Terjual</a>
+                                </div>
+                            </div>
 
-
-                    </div>
-
-                    <div class="dropdown mb-2 mt-2 pl-2">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            Status Mobil
-                        </button>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="<?php echo base_url('Tersedia') ?>">Tersedia</a>
-                            <a class="dropdown-item" href="<?php echo base_url('Terjual') ?>">Terjual</a>
-                        </div>
-                    </div>
-
-                    <table class="table table-bordered">
-                        <thead class="table-light">
-                            <tr>
-                                <th>No Polisi</th>
-                                <th>Jenis / Tipe</th>
-                                <th>Warna</th>
-                                <th>Bahan Bakar</th>
-                                <th>Tahun</th>
-                                <th>Harga Penjualan</th>
-                                <th>Status</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- manggil dari db -->
-                            <?php foreach ($data_mobil  as $mobil) { ?>
-                                <tr>
-                                    <td><?php echo $mobil->no_polis ?></td>
-                                    <td><?php echo $mobil->jenis_typr ?></td>
-                                    <td><?php echo $mobil->warna ?></td>
-                                    <td><?php echo $mobil->bahan_bakar ?></td>
-                                    <td><?php echo $mobil->tahun_keluaran ?></td>
-                                    <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
-                                    <td><label class="label label-success"><?php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
-                                    <td style=" text-align: center;">
-                                        <!-- <?php
-                                                if ($mobil->status == 1) { ?>
+                            <table class="table table-bordered">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>No Polisi</th>
+                                        <th>Jenis / Tipe</th>
+                                        <th>Warna</th>
+                                        <th>Bahan Bakar</th>
+                                        <th>Tahun</th>
+                                        <th>Harga Penjualan</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- manggil dari db -->
+                                    <?php foreach ($data_mobil  as $mobil) { ?>
+                                        <tr>
+                                            <td><?php echo $mobil->no_polis ?></td>
+                                            <td><?php echo $mobil->jenis_typr ?></td>
+                                            <td><?php echo $mobil->warna ?></td>
+                                            <td><?php echo $mobil->bahan_bakar ?></td>
+                                            <td><?php echo $mobil->tahun_keluaran ?></td>
+                                            <td>Rp <?php echo number_format($mobil->harga_jual) ?></td>
+                                            <td><label class="label label-success"><?php echo ($mobil->status == 1) ? 'Tersedia' : 'Terjual' ?> </td>
+                                            <td style=" text-align: center;">
+                                                <!-- <?php
+                                                        if ($mobil->status == 1) { ?>
                                             <a href="<?php echo base_url('search1') ?>" class="btn btn-sm btn-success">Non-Aktifkan</a>
                                         <?php    } else { ?>
 
@@ -130,40 +130,40 @@
 
                                         ?> -->
 
-                                        <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
-                                        <!-- <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?> -->
+                                                <!-- <?php echo anchor('Auth/status/' . $mobil->id_mobil, '<button class="btn btn-sm btn-success">Sold</button>'); ?> -->
+                                                <!-- <?php echo anchor('Auth/edit_ubahmobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/edit.png" style="width: 20px;"></button>'); ?> -->
 
 
-                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
-                                            <img src="assets/img/coin.png" style="width: 20px;">
-                                        </button>
+                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
+                                                    <img src="assets/img/edit.png" style="width: 20px;">
+                                                </button>
 
 
-                                        <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
+                                                <!-- <?php echo anchor('Auth/hapus_mobil/' . $mobil->id_mobil, '<button class="btn btn-light btn-xs" id="btnaksi" type="button"><img src="assets/img/trash.png" style="width: 20px;"></button>'); ?> -->
 
-                                        <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#hapus<?php echo $mobil->id_mobil ?>">
-                                            <img src="assets/img/trash.png" style="width: 20px;">
-                                        </button>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#hapus<?php echo $mobil->id_mobil ?>">
+                                                    <img src="assets/img/trash.png" style="width: 20px;">
+                                                </button>
 
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <!-- Bootstrap core JavaScript -->
-            <script src="assets/vendor/jquery/jquery.min.js"></script>
-            <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Bootstrap core JavaScript -->
+                    <script src="assets/vendor/jquery/jquery.min.js"></script>
+                    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-            <!-- Menu Toggle Script -->
-            <script>
-                $("#menu-toggle").click(function(e) {
-                    e.preventDefault();
-                    $("#wrapper").toggleClass("toggled");
-                });
-            </script>
+                    <!-- Menu Toggle Script -->
+                    <script>
+                        $("#menu-toggle").click(function(e) {
+                            e.preventDefault();
+                            $("#wrapper").toggleClass("toggled");
+                        });
+                    </script>
 </body>
 <!-- Modal -->
 <?php foreach ($data_mobil  as $mobil) { ?>
@@ -217,11 +217,6 @@
                         </div>
                     </div>
 
-
-
-
-
-
                     <div class="row g-2 align-items-center m-1" style="width: 100%;">
                         <div class="col-3 ">
                             <label for="text" class="col-form-label">Tgl jual</label>
@@ -236,7 +231,7 @@
                             <label for="text" class="col-form-label">Harga Jual</label>
                         </div>
                         <div class="col-8">
-                            <input type="text" id="harga_jual" name="harga_jual" class="form-control" required="required" class="col-form-label" value="<?php echo $mobil->harga_jual ?>">
+                            <input type="text" id="harga_jual" name="harga_jual" class="form-control" required="required" class="col-form-label">
                         </div>
                     </div>
 
