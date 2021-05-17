@@ -135,7 +135,7 @@
 
 
                                         <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
-                                            <img src="assets/img/coin.png" style="width: 20px;">
+                                            <img src="assets/img/edit.png" style="width: 20px;">
                                         </button>
 
 

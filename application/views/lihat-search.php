@@ -65,13 +65,18 @@
 
                 <div class="card-wrapper pb-3">
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;">Data Mobil</h5>
-
+                    <div class="x_panel">
+                    <div class="x_title">
                     <!-- search-->
-                    <div class="navbar-form navbar-right">
-                        <?php echo form_open('search') ?>
-                        <input type="text" name="keyword" class="form-control" placeholder="Search" required>
-                        <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Kembali</button>
-                        <?php echo form_close() ?>
+
+                    <div class="row g-2 align-items-center p-2">
+                            <div class="col-11">
+                            <?php echo form_open('search') ?>
+                            <input type="text" name="keyword" class="form-control" placeholder="Search" required>
+                            </div>
+                            <button type="button" class="btn btn-danger btn-xs" onclick="location.href='<?= base_url('lihatmobil'); ?>'">Kembali</button>
+                            <?php echo form_close() ?>
+
                     </div>
 
                     <table class="table table-bordered">
