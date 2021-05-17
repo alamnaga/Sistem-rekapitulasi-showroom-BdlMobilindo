@@ -62,13 +62,16 @@
 
             <div class="container-fluid">
                 <h3 style="color: orange; text-align: center; padding-top: 10px">Sistem Rekapitulasi Showroom</h3>
-
+                
+                
                 <div class="card-wrapper pb-3">
                     <h5 style="padding: 10px;border-bottom: 2px solid white; color: orange;"> Data Mobil </h5>
+                    <div class="x_panel">
+                    <div class="x_title">
 
                     <div class="navbar-form navbar-right">
                         <?php echo form_open('search') ?>
-                        <div class="row g-2 align-items-center m-1 p-2">
+                        <div class="row g-2 align-items-center p-2">
                             <div class="col-11">
                                 <input type="text" name="keyword" class="form-control" required>
                             </div>
@@ -80,7 +83,7 @@
 
                     </div>
 
-                    <div class="dropdown">
+                    <div class="dropdown mb-2 mt-2 pl-2">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                             Status Mobil
                         </button>
@@ -132,7 +135,7 @@
 
 
                                         <button type="button" class="btn btn-light btn-xs" data-toggle="modal" data-target="#edit<?php echo  $mobil->id_mobil ?>">
-                                            <img src="assets/img/edit.png" style="width: 20px;">
+                                            <img src="assets/img/coin.png" style="width: 20px;">
                                         </button>
 
 
